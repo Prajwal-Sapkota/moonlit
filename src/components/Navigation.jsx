@@ -96,7 +96,7 @@ const Navigation = () => {
 
                                 {activeDropdown === 'PAGES' && (
                                     <div
-                                        className="absolute right-0 mt-2 w-32 bg-black text-white py-1 z-50 text-left"
+                                        className="absolute right-0 mt-2 w-40 bg-black text-white py-1 z-50 text-left"
                                         onMouseEnter={() => setActiveDropdown('PAGES')}
                                         onMouseLeave={() => setActiveDropdown(null)}
                                     >
