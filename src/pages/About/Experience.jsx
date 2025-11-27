@@ -1,14 +1,6 @@
-import { FaCar, FaCoffee, FaSwimmingPool, FaTshirt, FaUserTie, FaWifi } from "react-icons/fa";
 
 export default function Experience() {
-    const services = [
-        { id: 1, title: "Airport Pick-up Service", description: "Lorem ipsum proin gravida velit auctor sde re sit amet space.", icon: FaCar },
-        { id: 2, title: "Wifi & Internet", description: "Lorem ipsum proin gravida velit auctor sde re sit amet space.", icon: FaWifi },
-        { id: 3, title: "Breakfast in Bed", description: "Lorem ipsum proin gravida velit auctor sde re sit amet space.", icon: FaCoffee },
-        { id: 4, title: "Housekeeper Services", description: "Lorem ipsum proin gravida velit auctor sde re sit amet space.", icon: FaUserTie },
-        { id: 5, title: "Laundry Services", description: "Lorem ipsum proin gravida velit auctor sde re sit amet space.", icon: FaTshirt },
-        { id: 6, title: "Swimming Pool", description: "Lorem ipsum proin gravida velit auctor sde re sit amet space.", icon: FaSwimmingPool },
-    ];
+    
 
     return (
         <div className="w-full bg-white py-24">
