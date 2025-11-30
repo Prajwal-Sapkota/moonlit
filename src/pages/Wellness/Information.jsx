@@ -34,21 +34,22 @@ export default function Information() {
                     {/* RIGHT TEXT SECTION */}
                     <div className="flex flex-col space-y-6 mt-2 ml-10">
 
-                        <h5 className="text-left text-sm md:text-md font-bold text-[#ba9d75] uppercase">
+                        <span className="text-left text-sm md:text-md font-medium text-[#ba9d75] uppercase">
                             SOOTHE YOUR SOUL
-                        </h5>
+                        </span>
 
-                        <h3 className="text-left text-4xl md:text-5xl font-light text-[#1b1c1b] mb-10 uppercase">
+                        <h3 className="text-left text-4xl md:text-5xl font-normal text-[#1b1c1b] mb-10 uppercase">
                             SPA TREATMENT
                         </h3>
-                        <h1 className="text-left text-sm md:text-lg font-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</h1>
-                        <ul id="list" className="list-disc marker:text-[#ba9d75] text-black pl-6 text-left ">
+                        <p className="text-left text-sm md:text-lg font-normal">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+                        <ul  className="list-disc marker:text-[#ba9d75] text-black pl-6 text-left py-6 ">
                             <li>Massage, Body Treatment & Facial Treatment</li>
                             <li>Two Saunas & One Steam bath</li>
                             <li>Bio- and Finnish saunas</li>
                         </ul>
+                        </p>
 
-                        <button id="discover" className="bg-[#ba9d75] text-white border border-[#ba9d78] w-64 py-3 font-semibold hover:bg-[#ab916c] mt-6">
+                        <button  className="bg-[#ba9d75] text-white border border-[#ba9d78] w-64 py-3 font-normal hover:bg-[#ab916c] ">
                             Request Information
                         </button>
 
@@ -61,19 +62,19 @@ export default function Information() {
 
 
                     {/* LEFT IMAGES */}
-                    <div className="flex flex-col space-y-6 mt-24">
-                        <h5 className="text-left text-sm md:text-md font-bold text-[#ba9d75] uppercase mt-10">
+                    <div className="flex flex-col space-y-6 py-24 ">
+                        <span className="text-left text-sm md:text-md font-medium text-[#ba9d75] uppercase ">
                             KEEP UP YOUR HEALTHY ROUTINE
-                        </h5>
+                        </span>
 
-                        <h3 className="text-left text-4xl md:text-5xl font-light text-[#1b1c1b] mb-10 uppercase">
+                        <h3 className="text-left text-4xl md:text-5xl font-normal text-[#1b1c1b]  uppercase py-4">
                             Personal Training & Movement
                         </h3>
-                        <h1 className="text-left text-sm md:text-lg font-light">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</h1>
-                        <div className="text-left space-y-2 text-black">
-                            <span className=" text-2xl font-light">Opening Hours</span>
+                        <p className="text-left text-sm md:text-lg font-normnal">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                        <div className="text-left space-y-2 text-black py-4">
+                            <h1 className=" text-2xl font-normal">Opening Hours</h1>
 
-                            <div className="flex items-center gap-2 mt-4">
+                            <div className="flex items-center gap-2 mt-4 font-normal">
 
                                 <FaClock className="text-[#ba9d75]" />
                                 <span>7:00 am - 9:00 pm</span>
@@ -86,7 +87,7 @@ export default function Information() {
                         </div>
 
 
-                        <button id="discover" className="bg-[#ba9d75] text-white border border-[#ba9d78] w-64 py-3 font-semibold hover:bg-[#ab916c] mt-6">
+                        <button className="bg-[#ba9d75] text-white border border-[#ba9d78] w-64 py-3 font-normal hover:bg-[#ab916c] ">
                             Request Information
                         </button>
 

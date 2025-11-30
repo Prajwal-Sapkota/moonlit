@@ -33,12 +33,12 @@ const Stats = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {statsData.map((stat, index) => (
             <div key={index} className="text-center">
-              <span id='count' className="text-3xl md:text-5xl font-light text-white mb-2 drop-shadow-lg">
+              <h2 id='count' className="text-3xl md:text-5xl font-normal text-white mb-2 drop-shadow-lg">
                 {counts[index]}{stat.suffix}
-              </span>
-              <h5 className="text-sm md:text-sm text-white uppercase drop-shadow-lg">
+              </h2>
+              <span className="text-sm md:text-sm text-white uppercase drop-shadow-lg font-medium">
                 {stat.description}
-              </h5>
+              </span>
             </div>
           ))}
         </div>

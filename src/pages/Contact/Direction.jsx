@@ -11,26 +11,26 @@ export default function Direction() {
 
         {/* Column 1 */}
         <div className="flex flex-col space-y-3 leading-relaxed items-center px-6">
-          <h5 className="text-md font-semibold text-[#ba9d75] uppercase">General Inquiries</h5>
-          <h3 className="text-2xl font-medium">Hotel Info Center</h3>
-          <h1>Business Hours: Monday – Sunday, 9 am – 5 pm</h1>
-          <h1>Telephone: +41 22 345 66 77</h1>
-          <h1>Fax: +41 22 345 77 89</h1>
-          <h1>Email: info@cozystay.com</h1>
-          <button id="discover" className="mt-4 font-light underline decoration-[#ba9d75] underline-offset-8 hover:no-underline transition-all duration-300">
+          <span className="text-md font-medium text-[#ba9d75] uppercase">General Inquiries</span>
+          <h3 className="text-2xl font-normal">Hotel Info Center</h3>
+          <p>Business Hours: Monday – Sunday, 9 am – 5 pm</p>
+          <p>Telephone: +41 22 345 66 77</p>
+          <p>Fax: +41 22 345 77 89</p>
+          <p>Email: info@cozystay.com</p>
+          <button  className="mt-4 font-normal underline decoration-[#ba9d75] underline-offset-8 hover:no-underline transition-all duration-300">
             Get Directions
           </button>
         </div>
 
         {/* Column 2 */}
         <div className="flex flex-col space-y-3 leading-relaxed items-center px-6">
-          <h5 className="text-md font-semibold text-[#ba9d75] uppercase">Reservation Details</h5>
-          <h3 className="text-2xl font-medium">Direct Reservations</h3>
-          <h1>Address: Rue de Lausanne, 1202 Genève, Switzerland</h1>
-          <h1>Telephone: +41 22 345 66 77</h1>
-          <h1>Fax: +41 22 345 77 89</h1>
-          <h1>Email: booking@cozystay.com</h1>
-          <button id="discover" className="mt-4 font-light underline decoration-[#ba9d75] underline-offset-8 hover:no-underline transition-all duration-300">
+          <span className="text-md font-medium text-[#ba9d75] uppercase">Reservation Details</span>
+          <h3 className="text-2xl font-normal">Direct Reservations</h3>
+          <p>Address: Rue de Lausanne, 1202 Genève, Switzerland</p>
+          <p>Telephone: +41 22 345 66 77</p>
+          <p>Fax: +41 22 345 77 89</p>
+          <p>Email: booking@cozystay.com</p>
+          <button className="py-3 font-normal underline decoration-[#ba9d75] underline-offset-8 hover:no-underline transition-all duration-300">
             Get Directions
           </button>
         </div>

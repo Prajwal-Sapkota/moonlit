@@ -28,12 +28,12 @@ const Hero = () => {
                         animateText ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                     }`}>
                         
-                        <h3 className="text-2xl md:text-3xl lg:text-7xl font-light  tracking-wider mb-4">
+                        <h3 className="text-2xl md:text-3xl lg:text-7xl font-normal  tracking-wider py-4">
                             ABOUT THE HOTEL
                         </h3>
-                        <h1 className="text-md md:text-sm lg:text-lg font-light tracking-wide mb-6">
+                        <p className="text-md md:text-sm lg:text-lg font-normal tracking-wide ">
                             Welcome to CozyStay, a boutique resort in the heart of Swiss Alps
-                        </h1>
+                        </p>
                     </div>
                 </div>
 

@@ -35,7 +35,7 @@ export default function Booking() {
         <div id="form" className="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
 
           <div className="flex flex-col">
-            <h1 className="text-white font-medium mb-2">Check In</h1>
+            <span className="text-white font-medium mb-2">Check In</span>
             <input
               type="date"
               value={checkInDate}
@@ -46,7 +46,7 @@ export default function Booking() {
           </div>
 
           <div className="flex flex-col">
-            <h1 className="text-white font-medium mb-2">Check Out</h1>
+            <span className="text-white font-normal mb-2">Check Out</span>
             <input
               type="date"
               value={checkOutDate}
@@ -57,7 +57,7 @@ export default function Booking() {
           </div>
 
           <div className="flex flex-col">
-            <h1 className="text-white font-medium mb-2">Rooms</h1>
+            <span className="text-white font-normal mb-2">Rooms</span>
             <div className="border border-[#ba9d75]  p-2 flex justify-between items-center text-white">
               <button onClick={() => decrement(setRooms, 1)}>-</button>
               <span>{rooms}</span>
@@ -66,7 +66,7 @@ export default function Booking() {
           </div>
 
           <div  className="flex flex-col relative" ref={dropdownRef}>
-            <h1 className="text-white font-medium mb-2">Guests</h1>
+            <span className="text-white font-normal mb-2">Guests</span>
             <button
               onClick={() => setIsGuestDropdownOpen(!isGuestDropdownOpen)}
               className="border border-[#ba9d75] p-2 text-left text-white bg-black focus:outline-none"
@@ -85,7 +85,7 @@ export default function Booking() {
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
-                  <div>Children</div>
+                  <span>Children</span>
                   <div className="flex items-center gap-2">
                     <button onClick={() => decrement(setChildren, 0)}>-</button>
                     <span>{children}</span>
@@ -97,7 +97,7 @@ export default function Booking() {
           </div>
 
           <div>
-            <button id="check" className="w-full bg-[#ba9d75] text-white font-semibold py-3 px-6  hover:bg-[#ab916c] transition-colors cursor-pointer">
+            <button  className="w-full bg-[#ba9d75] text-white font-normal py-3 px-6  hover:bg-[#ab916c] transition-colors cursor-pointer">
               Check Availability
             </button>
           </div>

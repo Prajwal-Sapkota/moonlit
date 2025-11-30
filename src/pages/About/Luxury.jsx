@@ -9,21 +9,21 @@ const Luxury = () => {
 
   return (
     <div className="w-full bg-white">
-      <div className="py-12 px-4 sm:px-12 text-center">
-        <h5 className="text-sm sm:text-md font-light tracking-wider mb-4 sm:mb-8 text-[#ba9d75] mt-10">
+      <div className="py-24 px-4 sm:px-12 text-center">
+        <span className="text-sm sm:text-md font-medium tracking-wider text-[#ba9d75] py-4">
           SWISS HERITAGE MEETS MODERN LUXURY
-        </h5>
-        <h3 className="text-2xl sm:text-3xl md:text-4xl font-light text-[#1b1c1b] mx-auto leading-relaxed mb-6">
+        </span>
+        <h3 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#1b1c1b] mx-auto leading-relaxed py-6">
           CozyStay in the heart of the mountains is an architectural<br />
           masterpiece offering contemporary accommodations<br />
           with unrivalled ski and hiking trails.
         </h3>
-        <h1 className="text-md sm:text-md md:text-lg font-light text-[#1b1c1b] mx-auto leading-relaxed">
+        <p className="text-md sm:text-md md:text-lg font-normal text-[#1b1c1b] mx-auto leading-relaxed">
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit.  Aenean commodo ligula eget dolor. <br /> Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-        </h1>
+        </p>
       </div>
 
-      <div className="relative w-full py-8">
+      <div className="relative w-full ">
         <div className="max-w-7xl mx-auto px-4">
           <div className="relative shadow-2xl overflow-hidden ">
             <div className="relative pb-[50%] h-0"> {/* Reduced height here */}

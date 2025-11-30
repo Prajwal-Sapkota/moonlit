@@ -57,31 +57,31 @@ export default function Experience() {
                     </div>
 
                     {/* RIGHT TEXT SECTION */}
-                    <div className="flex flex-col space-y-6 mt-2">
+                    <div className="flex flex-col space-y-6 ">
 
-                        <h5 className="text-left text-sm md:text-md font-bold text-[#ba9d75] uppercase">
+                        <span className="text-left text-sm md:text-md font-medium text-[#ba9d75] uppercase">
                             Perfect Fine Dine Experiences
-                        </h5>
+                        </span>
 
-                        <h3 className="text-left text-4xl md:text-5xl font-light text-[#1b1c1b] mb-10 uppercase">
+                        <h3 className="text-left text-4xl md:text-5xl font-normal text-[#1b1c1b]  uppercase ">
                             Experience exquisite cuisine at The Restaurant
                         </h3>
-                        <h1 className="text-left text-sm md:text-lg font-light">We are committed to create wonderful memories for all guests with every stay. Carefully curated menus incorporate locally sourced ingredients into exquisite dishes that reflect the locals and the world around them. Wherever you are in the world, we’ll take your taste buds on a journey they’ll never forget. Authentic flavors and culinary skills combine to create an unforgettable dining experience. </h1>
+                        <p className="text-left text-sm md:text-lg font-normal">We are committed to create wonderful memories for all guests with every stay. Carefully curated menus incorporate locally sourced ingredients into exquisite dishes that reflect the locals and the world around them. Wherever you are in the world, we’ll take your taste buds on a journey they’ll never forget. Authentic flavors and culinary skills combine to create an unforgettable dining experience. </p>
 
                         {/* NEW DATA IN GRID */}
-                        <div className="grid grid-cols-1 gap-12">
+                        <div className="grid grid-cols-1 gap-6 py-2">
                             {services.map((service) => {
                                 const IconComponent = service.icon;
                                 return (
                                     <div key={service.id} className="flex items-start space-x-4">
                                         <IconComponent className="text-[#ba9f79] mt-1" size={28} />
                                         <div>
-                                            <h3 className="text-left text-xl font-semibold text-[#1b1c1b]">
+                                            <h3 className="text-left text-xl font-normal text-[#1b1c1b]">
                                                 {service.title}
                                             </h3>
-                                            <h1 className="text-left text-[#1b1c1b]">
+                                            <p className="text-left text-[#1b1c1b] font-normal">
                                                 {service.description}
-                                            </h1>
+                                            </p>
                                         </div>
                                     </div>
                                 );

@@ -55,11 +55,11 @@ const Explore = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-16">
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <h5 className="text-xs sm:text-sm text-[#ba9d75] font-medium uppercase mb-4 drop-shadow-md">
+      <div className="max-w-4xl mx-auto text-center py-10">
+        <span className="text-xs sm:text-sm text-[#ba9d75] font-medium uppercase mb-4 drop-shadow-md">
           Explore the majestic Swiss Alps
-        </h5>
-        <h3 className="text-2xl sm:text-3xl md:text-3xl font-semibold text-black leading-snug">
+        </span>
+        <h3 className="text-2xl sm:text-3xl md:text-3xl font-normal text-black leading-snug py-4">
           Andermatt awaits you with year-round outdoor activities amidst spectacular nature. When it comes to leisure activities, the Alps are almost unbeatable.
         </h3>
       </div>
@@ -68,7 +68,7 @@ const Explore = () => {
         <section
           key={idx}
           ref={sectionRefs[idx]}
-          className="relative w-full min-h-[96vh] flex flex-col items-center justify-center mb-24 lg:mb-32"
+          className="relative w-full min-h-[96vh] flex flex-col items-center justify-center "
         >
           <div
             className={`relative w-full flex flex-col lg:flex-row items-center ${section.reverse ? "lg:flex-row-reverse" : ""
@@ -90,32 +90,32 @@ const Explore = () => {
 
             {/* Content */}
             <div
-              className={`bg-black p-8 lg:p-12 space-y-6 transition-all duration-1000 ease-out w-full lg:w-1/2 mt-8 lg:mt-0 lg:absolute lg:top-1/2 lg:-translate-y-1/2 ${section.reverse ? "lg:left-0" : "lg:right-0"
+              className={`bg-black py-15 px-3 space-y-2 transition-all duration-1000 ease-out w-full lg:w-1/2  lg:absolute lg:top-1/2 lg:-translate-y-1/2 ${section.reverse ? "lg:left-0" : "lg:right-0"
                 } z-10 shadow-2xl  ${section.reverse
                   ? slideInRight(isVisible[idx])
                   : slideInLeft(isVisible[idx])
                 }`}
             >
-              <h5 className="text-sm text-[#ba9d75] uppercase tracking-wide">
+              <span className="text-sm text-[#ba9d75] uppercase tracking-wide font-medium ">
                 {section.subtitle}
-              </h5>
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white uppercase">
+              </span>
+              <h3 className="text-2xl md:text-3xl lg:text-4xl font-normal text-white uppercase py-8">
                 {section.title}
               </h3>
-              <h1 className="text-white leading-relaxed text-lg">{section.text}</h1>
-              <button id="discover" className="bg-transparent text-white px-8 py-3 font-semibold hover:bg-[#ba9d78] transition-colors duration-300 uppercase tracking-wide border border-[#ba9d75]">
+              <p className="text-white leading-relaxed text-lg font-normal mb-8">{section.text}</p>
+              <button  className="bg-transparent text-white px-8 py-3 font-normal hover:bg-[#ba9d78] transition-colors duration-300 uppercase tracking-wide border border-[#ba9d75]">
                 Discover More
               </button>
 
-              <div className="grid grid-cols-3 gap-4 mt-6 text-white">
+              <div className="grid grid-cols-3 gap-4 text-white py-6">
                 {section.stats.map((stat, idx2) => (
                   <div key={idx2} className="text-center p-3">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-1">
+                    <h3 className="text-2xl md:text-3xl font-semibold ">
                       {stat.value}
                     </h3>
-                    <h1 className="text-xs md:text-sm font-medium text-[#ba9d75] uppercase tracking-wide">
+                    <span className="text-xs md:text-sm font-medium text-[#ba9d75] uppercase tracking-wide">
                       {stat.label}
-                    </h1>
+                    </span>
                   </div>
                 ))}
               </div>

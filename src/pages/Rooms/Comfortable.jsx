@@ -26,27 +26,27 @@ const Comfortable = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
           {/* Left Side - Text Content */}
-          <div className="space-y-8">
+          <div className="space-y-8 text-left py-10">
             <div>
-              <h5 className="text-left text-md md:text-md font-light mb-6 text-[#ba9d75] mt-10">
+              <span className=" text-md md:text-md font-medium  text-[#ba9d75] ">
                 COMFORTABLE STAY EXPERIENCE
-              </h5>
+              </span>
 
-              <h3 className=" text-left text-3xl md:text-4xl font-light mb-4">
+              <h3 className="  text-3xl md:text-4xl font-normal py-6">
                 MOST POPULAR FACILITIES
               </h3>
 
-              <h1 className="text-left leading-relaxed mb-8 text-gray-200">
+              <p className=" leading-relaxed mb-8 text-gray-200 font-normal">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
                 Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              </h1>
+              </p>
 
               {/* More About Services Button */}
               <div className="flex justify-start">
                 <button  className="text-lg font-light inline-flex items-center group">
-                  <span id="services2" className="border-b-2 border-[#ba9d75] group-hover:border-transparent transition-all">
+                  <button  className="border-b-2 border-[#ba9d75] group-hover:border-transparent transition-all font-normal">
                     More About Services
-                  </span>
+                  </button>
                   
                 </button>
               </div>
@@ -64,7 +64,7 @@ const Comfortable = () => {
                   <div className="text-[#ba9d75] mr-3 font-light text-lg group-hover:scale-110 transition-transform">
                     +
                   </div>
-                  <span className="text-gray-200 group-hover:text-white transition-colors">
+                  <span className="text-gray-200 group-hover:text-white transition-colors font-normal">
                     {facility}
                   </span>
                 </div>

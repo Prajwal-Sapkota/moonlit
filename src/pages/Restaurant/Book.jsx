@@ -32,17 +32,17 @@ export default function Book() {
                         return (
                             <div key={item.id} className="flex flex-col items-center space-y-4">
                                 <Icon className="text-5xl text-[#ba9d75]" />
-                                <h3 className="uppercase tracking-wide text-2xl font-medium text-white">
+                                <h3 className="uppercase tracking-wide text-2xl font-normal text-white">
                                     {item.title}
                                 </h3>
-                                <h1 className="text-white/90 text-md">{item.value}</h1>
+                                <p className="text-white/90 text-md font-normal">{item.value}</p>
                             </div>
                         );
                     })}
 
                 </div>
 
-                <button id="book" className="text-white text-xl font-extralight border-b border-[#ba9d75] hover:border-transparent transition-all duration-300 py-1">
+                <button className="text-white text-xl font-normal border-b border-[#ba9d75] hover:border-transparent transition-all duration-300 py-1">
                     Book Now
                 </button>
 

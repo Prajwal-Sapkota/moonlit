@@ -47,17 +47,17 @@ const RoomsSlider = () => {
     return (
         <div className="bg-[#f2ece4] py-12 px-4">
             <div className="max-w-7xl mx-auto ">
-                <div className="flex flex-col md:flex-row justify-between items-start mb-20">
+                <div className="flex flex-col md:flex-row justify-between items-start py-20">
                     <div className="mb-4 md:mb-0">
-                        <h5 className=" text-left text-sm md:text-md font-bold text-[#ba9d75] mb-6">
+                        <span className=" text-left text-sm md:text-md font-medium text-[#ba9d75] ">
                             DISCOVER OUR ACCOMMODATIONS
-                        </h5>
-                        <h3 className=" text-left text-3xl md:text-4xl lg:text-5xl text-[#1b1c1b] mb-4">
+                        </span>
+                        <h3 className=" text-left text-3xl md:text-4xl lg:text-5xl text-[#1b1c1b] py-6 font-normal">
                             ROOMS. SUITES. VILLAS
                         </h3>
                     </div>
                     <div>
-                        <button id="explore" className="inline-flex items-center gap-2 hover:text-[#ba9d75] text-[#1b1c1b] font-medium py-2 px-4 md:py-3 md:px-6 transition-colors duration-300 text-2xl sm:text-lg md:text-3xl mt-12 cursor-pointer">
+                        <button className="inline-flex items-center gap-2 hover:text-[#ba9d75] text-[#1b1c1b] font-normmal py-2 px-4 md:py-3 md:px-6 transition-colors duration-300 text-2xl sm:text-lg md:text-3xl mt-12 cursor-pointer">
                             Explore All Accommodations
                             <FaArrowRight size={14} />
                         </button>
@@ -89,18 +89,18 @@ const RoomsSlider = () => {
                                     alt={room.name}
                                     className="w-full h-full object-cover"
                                 />
-                                <div id="rate" className="absolute inset-0 bg-black/40"></div>
-                                <div  className="absolute top-2 left-2 md:top-4 md:left-4 bg-[#67593f] text-white font-light py-1 px-3 md:py-2 md:px-4 border border-[#ba9d75] text-sm md:text-base">
+                                <div className="absolute inset-0 bg-black/40"></div>
+                                <span  className="absolute top-2 left-2 md:top-4 md:left-4 bg-[#67593f] text-white font-normal py-1 px-3 md:py-2 md:px-4 border border-[#ba9d75] text-sm md:text-base">
                                     FROM {room.price}
-                                </div>
+                                </span>
 
-                                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 md:p-10 text-white text-center space-y-2 md:space-y-4">
-                                    <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold">{room.name}</h3>
-                                    <div id="info" className="flex flex-wrap justify-center gap-2 md:gap-4 text-sm sm:text-base md:text-lg mt-2">
-                                        <div className="flex items-center gap-1 md:gap-2"><FaRulerCombined /> {room.size}</div>
-                                        <div className="flex items-center gap-1 md:gap-2"><FaUsers /> {room.guests}</div>
-                                        <div className="flex items-center gap-1 md:gap-2"><FaBed /> {room.beds}</div>
-                                        <div className="flex items-center gap-1 md:gap-2"><FaBath /> {room.bathroom}</div>
+                                <div className="absolute inset-0 flex flex-col justify-center items-center p-4 md:p-10 text-white text-center space-y-2 md:space-y-4 font-normal">
+                                    <h3 className="text-2xl sm:text-3xl md:text-5xl font-normal">{room.name}</h3>
+                                    <div className="flex flex-wrap justify-center gap-2 md:gap-4 text-sm sm:text-base md:text-lg mt-2 font-normal">
+                                        <span className="flex items-center gap-1 md:gap-2 "><FaRulerCombined /> {room.size}</span>
+                                        <span className="flex items-center gap-1 md:gap-2"><FaUsers /> {room.guests}</span>
+                                        <span className="flex items-center gap-1 md:gap-2"><FaBed /> {room.beds}</span>
+                                        <span className="flex items-center gap-1 md:gap-2"><FaBath /> {room.bathroom}</span>
                                     </div>
                                 </div>
                             </div>

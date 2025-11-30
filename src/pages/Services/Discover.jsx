@@ -45,11 +45,11 @@ const Discover = () => {
 
                     {/* LEFT COLUMN — 1/3 */}
                     <div className="lg:col-span-1 space-y-10">
-                        <div className="space-y-6">
-                            <h5 className=" text-left text-sm md:text-md font-bold text-[#ba9d75]">
+                        <div className=" text-left space-y-6 py-2">
+                            <span className="text-sm md:text-md font-medium text-[#ba9d75]">
                                 DISCOVER THE SERVICES WE OFFERED
-                            </h5>
-                            <h3 className="text-left text-3xl md:text-3xl font-light text-[#1b1c1b] uppercase">
+                            </span>
+                            <h3 className="text-left text-3xl md:text-3xl font-normal text-[#1b1c1b] uppercase py-6">
                                 Get an overview of our outstanding additional benefits
                             </h3>
                         </div>
@@ -57,18 +57,17 @@ const Discover = () => {
 
                         <div className="flex items-center space-x-4">
                             {/* Big Call Icon */}
-                            <MdCall className="text-5xl text-[#ba9d75]" />
+                            <MdCall className="text-6xl text-[#ba9d75]" />
 
-                            <div className="space-y-1">
-                                <h5 className="text-left text-sm font-medium text-[#ba9d75] uppercase tracking-widest">
+                            <div className="space-y-1 text-left">
+                                <span className=" text-sm font-medium text-[#ba9d75] uppercase tracking-widest">
                                     CALL US FOR MORE INFORMATION
-                                </h5>
-                                <a
-                                    href="tel:+41223456788"
-                                    className="text-left text-2xl sm:text-4xl font-light text-black hover:text-[#ba9d75] transition-colors duration-300 inline-block number"
+                                </span>
+                                <h2
+                                    className=" text-2xl sm:text-4xl font-light text-black hover:text-[#ba9d75] transition-colors duration-300 inline-block number"
                                 >
                                     +41 22 345 67 88
-                                </a>
+                                </h2>
                             </div>
                         </div>
 
@@ -84,7 +83,7 @@ const Discover = () => {
                                     onClick={() => toggleService(index)}
                                     className="w-full text-left py-6 px-4  transition-colors duration-200 flex justify-between items-center"
                                 >
-                                    <h3 className="text-xl font-semibold text-gray-900 hover:text-[#ba9d75] pr-4 cursor-pointer">
+                                    <h3 className="text-xl font-medium text-gray-900 hover:text-[#ba9d75] pr-4 cursor-pointer">
                                         {service.title}
                                     </h3>
 
@@ -98,9 +97,9 @@ const Discover = () => {
                                         }`}
                                 >
                                     <div className="pb-6 px-4">
-                                        <h1 className="text-gray-600 leading-relaxed text-lg">
+                                        <p className="text-gray-600 leading-relaxed text-lg font-normal">
                                             {service.description}
-                                        </h1>
+                                        </p>
                                     </div>
                                 </div>
 

@@ -23,7 +23,7 @@ export default function Essentials() {
                         <div className="grid grid-cols-2 gap-6">
 
                             <div className="group cursor-pointer">
-                                <div className="relative overflow-hidden h-[400px] mt-6">
+                                <div className="relative overflow-hidden h-[420px] mt-6">
                                     <img
                                         src="/images/mountain.avif"
                                         alt="Winter Activities"
@@ -33,7 +33,7 @@ export default function Essentials() {
                             </div>
 
                             <div className="group cursor-pointer">
-                                <div className="relative overflow-hidden h-[450px] ">
+                                <div className="relative overflow-hidden h-[480px] ">
                                     <img
                                         src="/images/lakeview.avif"
                                         alt="Summer Activities"
@@ -46,11 +46,11 @@ export default function Essentials() {
 
                     </div>
 
-                    <div className="flex flex-col space-y-6 mt-2">
-                        <h5 className="text-left text-sm md:text-md font-bold text-[#ba9d75]">
+                    <div className="flex flex-col space-y-6">
+                        <span className="text-left text-sm md:text-md font-medium text-[#ba9d75]">
                             DISCOVER THE SERVICES WE OFFERED
-                        </h5>
-                        <h3 className=" text-left text-4xl md:text-5xl font-light text-[#1b1c1b] mb-10">
+                        </span>
+                        <h3 className=" text-left text-4xl md:text-5xl font-normal text-[#1b1c1b] mb-10">
                             THE ESSENTIALS
                         </h3>
 
@@ -62,8 +62,8 @@ export default function Essentials() {
                                     <div key={service.id} className="flex items-start space-x-4">
                                         <IconComponent className="text-[#ba9f79] mt-1" size={28} />
                                         <div>
-                                            <h3 className=" text-left text-xl font-semibold text-[#1b1c1b]">{service.title}</h3>
-                                            <h1 className="text-left text-[#1b1c1b]">{service.description}</h1>
+                                            <h3 className=" text-left text-xl font-normal text-[#1b1c1b]">{service.title}</h3>
+                                            <p className="text-left text-[#1b1c1b] font-normal">{service.description}</p>
                                         </div>
                                     </div>
                                 );

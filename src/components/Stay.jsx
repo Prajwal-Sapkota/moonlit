@@ -23,13 +23,13 @@ export default function Stay() {
             <div className="absolute inset-0 bg-black/70"></div>
 
             <div
-                id="stayform"
-                className="relative z-10 text-center px-4 sm:px-6 md:px-12 w-full max-w-6xl mx-auto mt-0 sm:-mt-12"
+                
+                className="relative z-10 text-center px-4 sm:px-6 md:px-12 w-full max-w-6xl mx-auto py-6 "
             >
-                <h5 className="text-xs sm:text-sm mb-2 sm:mb-4 drop-shadow-md text-[#ba9d75] font-medium">
+                <span className="text-xs sm:text-sm mb-2 sm:mb-4 drop-shadow-md text-[#ba9d75] font-medium">
                     BOOK YOUR STAY NOW
-                </h5>
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-snug mb-8 sm:mb-10">
+                </span>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-normal leading-snug py-10">
                     Escape to the beautiful mountains where dreams come true.
                     <br />
                     Immerse yourself in the restorative qualities of nature, far from everyday life.
@@ -41,20 +41,20 @@ export default function Stay() {
                         className="flex flex-col md:items-start items-center text-left w-full relative cursor-pointer"
                         onClick={() => openDatePicker(checkInRef)}
                     >
-                        <div className="flex items-center gap-2 mb-1 sm:mb-2">
+                        <div className="flex items-center gap-2 py-2">
                             <FaRegCalendarCheck className="text-[#ba9d75]" size={20} />
-                            <h3 className="font-semibold text-lg sm:text-base text-white cursor-pointer">Check In</h3>
+                            <h2 className="font-normal text-lg sm:text-base text-white cursor-pointer">Check In</h2>
                         </div>
                         <input
                             ref={checkInRef}
                             type="date"
                             value={checkIn}
                             onChange={(e) => setCheckIn(e.target.value)}
-                            className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
+                            className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer font-normal"
                         />
-                        <div className="bg-transparent text-white mt-1 text-center md:text-left px-3 py-2 w-full cursor-pointer ">
+                        <span className="bg-transparent text-white mt-1 text-center md:text-left px-3 py-2 w-full cursor-pointer font-normal ">
                             {checkIn}
-                        </div>
+                        </span>
                     </div>
 
                     <div className="hidden md:block w-px h-16 bg-[#ba9d75]"></div>
@@ -63,9 +63,9 @@ export default function Stay() {
                         className="flex flex-col md:items-start items-center text-left w-full relative cursor-pointer"
                         onClick={() => openDatePicker(checkOutRef)}
                     >
-                        <div className="flex items-center gap-2 mb-1 sm:mb-2">
+                        <div className="flex items-center gap-2 py-2">
                             <FaRegCalendarCheck className="text-[#ba9d75]" size={20} />
-                            <h3 className="font-semibold text-lg sm:text-base text-white cursor-pointer">Check Out</h3>
+                            <h2 className="font-normal text-lg sm:text-base text-white cursor-pointer">Check Out</h2>
                         </div>
                         <input
                             ref={checkOutRef}
@@ -74,17 +74,17 @@ export default function Stay() {
                             onChange={(e) => setCheckOut(e.target.value)}
                             className="absolute top-0 left-0 w-full h-full opacity-0 cursor-pointer"
                         />
-                        <div className="bg-transparent text-white mt-1 text-center md:text-left px-3 py-2 w-full cursor-pointer ">
+                        <span className="bg-transparent text-white mt-1 text-center md:text-left px-3 py-2 w-full cursor-pointer ">
                             {checkOut}
-                        </div>
+                        </span>
                     </div>
 
                     <div className="hidden md:block w-px h-16 bg-[#ba9d75]"></div>
 
                     <div className="flex flex-col md:items-start items-center text-left w-full">
-                        <div className="flex items-center gap-2 mb-1 sm:mb-2">
+                        <div className="flex items-center gap-2 py-2">
                             <FaUserFriends className="text-[#ba9d75]" size={20} />
-                            <h3 className="font-semibold text-lg sm:text-base text-white">Guests</h3>
+                            <h2 className="font-normal text-lg sm:text-base text-white">Guests</h2>
                         </div>
                         <select
                             value={guests}
@@ -99,8 +99,7 @@ export default function Stay() {
                     </div>
 
                     <button
-                        id="check"
-                        className="bg-[#ba9d75] hover:bg-[#ab916c] text-white font-semibold px-8 py-3 w-full md:w-8xl mt-2 md:mt-0 transition-colors duration-300 cursor-pointer"
+                        className="bg-[#ba9d75] hover:bg-[#ab916c] text-white font-normal px-8 py-3 w-full md:w-8xl mt-2 md:mt-0 transition-colors duration-300 cursor-pointer"
                     >
                         Check Availability
                     </button>

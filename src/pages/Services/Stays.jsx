@@ -58,14 +58,14 @@ const Stays = () => {
             <section className="relative min-h-[96vh] w-full bg-black flex flex-col items-center justify-center text-white">
                 <div className="absolute inset-0 bg-black/70"></div>
 
-                <div className="relative z-10 text-center px-4 sm:px-6 md:px-12 w-full max-w-6xl mx-auto">
-                    <h5 className="text-xs sm:text-sm sm:mb-4 drop-shadow-md text-[#ba9d75] font-medium mt-15 mb-10">ENJOY YOUR STAY</h5>
-                    <h3 className="text-2xl sm:text-3xl md:text-5xl font-semibold leading-snug mb-4 sm:mb-10">SPEND YOUR COMFORTABLE HOLIDAY</h3>
-                    <h1 className="text-lg sm:text-md md:text-lg font-semibold leading-snug mb-8 sm:mb-10">
+                <div className="relative z-10 text-center px-4 sm:px-6 md:px-12 w-full max-w-6xl mx-auto py-20">
+                    <span className="text-xs sm:text-sm sm:mb-4 drop-shadow-md text-[#ba9d75] font-medium ">ENJOY YOUR STAY</span>
+                    <h3 className="text-2xl sm:text-3xl md:text-5xl font-normal leading-snug py-4 ">SPEND YOUR COMFORTABLE HOLIDAY</h3>
+                    <p className="text-lg sm:text-md md:text-lg font-normal leading-snug py-2 ">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.<br />
                         Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus.
-                    </h1>
-                    <button id="explore1" className="bg-transparent text-white border border-[#ba9d75] w-64 font-semibold py-3 px-6 hover:bg-[#ab916c] transition-colors cursor-pointer mt-4 mb-12">
+                    </p>
+                    <button  className="bg-transparent text-white border border-[#ba9d75] w-64 font-normal py-3 px-6 hover:bg-[#ab916c] transition-colors cursor-pointer mt-4 mb-12">
                         Explore Accommodation
                     </button>
                 </div>
@@ -102,13 +102,13 @@ const Stays = () => {
                                         <div className="absolute inset-0 hover:bg-[#4c5947]/80  ">
 
                                         {/* Content */}
-                                        <div className="absolute inset-0 bg-black/40 flex flex-col justify-between p-4 pointer-events-none">
-                                            <h1 className="text-center text-black   bg-white px-1 py-1 w-20">
+                                        <div className="absolute inset-0 bg-black/40 flex flex-col justify-between p-4 ">
+                                            <span className="text-center text-black   bg-white px-1 py-1 w-20 font-normal">
                                                 {suite.price}
-                                            </h1>
-                                            <div className="text-left text-white mb-6">
-                                                <h3 className="text-3xl ">{suite.name}</h3>
-                                                <h1 className="text-sm">{suite.size} / {suite.view} / {suite.guests} Guests</h1>
+                                            </span>
+                                            <div className="text-left text-white py-6">
+                                                <h3 className="text-3xl font-normal py-4 ">{suite.name}</h3>
+                                                <span className="text-sm font-normal ">{suite.size} / {suite.view} / {suite.guests} Guests</span>
                                             </div>
                                         </div>
                                     </div>

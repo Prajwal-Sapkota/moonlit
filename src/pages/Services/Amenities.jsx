@@ -21,24 +21,24 @@ export default function Amenities() {
             <div className="max-w-7xl mx-auto px-8 text-black">
 
 
-                <div className="flex flex-col space-y-6 mt-2">
-                    <h5 className="text-sm md:text-md font-bold text-[#ba9d75]">
+                <div className="flex flex-col space-y-6 ">
+                    <span className="text-sm md:text-md font-medium text-[#ba9d75]">
                         AMENITIES AND SERVICES
-                    </h5>
-                    <h3 className=" text-4xl md:text-5xl font-light text-[#1b1c1b] mb-15">
+                    </span>
+                    <h3 className=" text-4xl md:text-5xl font-normal text-[#1b1c1b] py-4">
                         DISCOVER THE SERVICES WE OFFERED
                     </h3>
 
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 py-8">
                         {services.map((service) => {
                             const IconComponent = service.icon;
                             return (
                                 <div key={service.id} className="flex items-start space-x-8 bg-gray-100 px-4 py-4">
                                     <IconComponent className="text-[#ba9f79] mt-1" size={48} />
                                     <div>
-                                        <h3 className=" text-left text-xl font-semibold text-[#1b1c1b]">{service.title}</h3>
-                                        <h1 className="text-left text-[#1b1c1b]">{service.description}</h1>
+                                        <h3 className=" text-left text-xl font-normal text-[#1b1c1b]">{service.title}</h3>
+                                        <p className="text-left text-[#1b1c1b] font-normal">{service.description}</p>
                                     </div>
                                 </div>
                             );

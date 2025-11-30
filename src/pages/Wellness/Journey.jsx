@@ -11,14 +11,14 @@ const activities = [
 
 const Journey = () => {
     return (
-        <div className=" bg-[#121212] py-12 sm:py-16 px-4">
-            <div className="text-center mb-10 sm:mb-12 max-w-3xl mx-auto">
-                <h5 className="text-sm sm:text-md font-bold text-[#bda17b] mb-10">ENJOY YOUR WELLNESS</h5>
-                <h3 className="text-3xl sm:text-3xl lg:text-4xl font-semibold text-white mb-6 uppercase">Everything you need to bring energy, body and spirit into balance</h3>
-                <h1 className="text-md sm:text-md font-bold text-white mb-10">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </h1>
+        <div className=" bg-[#121212] py-24  px-4">
+            <div className="text-center  max-w-3xl mx-auto">
+                <span className="text-sm sm:text-md font-normal text-[#bda17b] ">ENJOY YOUR WELLNESS</span>
+                <h3 className="text-3xl sm:text-3xl lg:text-4xl font-normal text-white uppercase py-8">Everything you need to bring energy, body and spirit into balance</h3>
+                <p className="text-md sm:text-md font-normal text-white ">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
             </div>
 
-            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mt-6">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 py-8">
                 {activities.map((activity, index) => (
                     <div
                         key={activity.id}
@@ -38,7 +38,7 @@ const Journey = () => {
                             <h1 className="text-3xl sm:text-xl md:text-6xl font-light tracking-wider mb-5 text-[#ba9d75]">
                                 {activity.icon}
                             </h1>
-                            <h3 className="text-xl sm:text-xl md:text-2xl font-light mb-10">
+                            <h3 className="text-xl sm:text-xl md:text-2xl font-normal mb-10">
                                 {activity.title}
                             </h3>
                         </div>

@@ -97,7 +97,7 @@ export default function Book() {
           </div>
 
           <div>
-            <button id="check" className="w-full bg-[#ba9d75] text-white font-semibold py-3 px-6  hover:bg-[#ab916c] transition-colors cursor-pointer">
+            <button className="w-full bg-[#ba9d75] text-white font-normal py-3 px-6  hover:bg-[#ab916c] transition-colors cursor-pointer">
               Check Availability
             </button>
           </div>

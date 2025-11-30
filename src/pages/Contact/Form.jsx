@@ -41,22 +41,22 @@ const Form = () => {
                     <div className="flex flex-col justify-center lg:ml-20">
                         {/* Header Section */}
                         <div className="mb-8">
-                            <h5 className="text-xs sm:text-sm text-[#ba9d75] font-medium uppercase mb-4 tracking-wider">
+                            <span className="text-xs sm:text-sm text-[#ba9d75] font-medium uppercase tracking-wider">
                                 CONTACT US TO GET MORE DETAILS
-                            </h5>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-black uppercase mb-4">
+                            </span>
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-black uppercase py-6">
                                 LET'S START A CONVERSATION
                             </h2>
                             <div className="space-y-2">
-                                <h1 className="text-lg text-gray-600">
+                                <p className="text-lg text-gray-600 font-normal">
                                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo ligula eget dolor. Aenean massa. Cumsociis natoque.
-                                </h1>
+                                </p>
                                
                             </div>
                         </div>
 
                         {/* Contact Form */}
-                        <form id="form1" onSubmit={handleSubmit} className="space-y-6">
+                        <form  onSubmit={handleSubmit} className="space-y-8">
                             {/* Name Field */}
                             <div>
                                 <input
@@ -101,9 +101,9 @@ const Form = () => {
 
                             {/* Submit Button */}
                             <div>
-                                <button id="discover"
+                                <button
                                     type="submit"
-                                    className="bg-[#ba9d75] text-white px-12 py-4 font-semibold uppercase tracking-wider hover:bg-[#ab916c] transition-colors duration-300 border border-[#ba9d75] w-full sm:w-auto"
+                                    className="bg-[#ba9d75] text-white px-12 py-4 font-normal uppercase tracking-wider hover:bg-[#ab916c] transition-colors duration-300 border border-[#ba9d75] w-full sm:w-auto"
                                 >
                                     Send Your Message
                                 </button>

@@ -32,8 +32,8 @@ const Navigation = () => {
         <div>
             {/* Top Info Bar */}
             <div className="hidden lg:block bg-transparent border-b border-white/20 py-5 w-full">
-                <div className="flex justify-between text-sm text-white px-8 ml-24">
-                    <span>CHABAHIL, KATHMANDU, NEPAL</span>
+                <div className="flex justify-between text-sm text-white px-8 ml-24" style={{ fontWeight: 500 }}>
+                    <span >CHABAHIL, KATHMANDU, NEPAL</span>
                     <div className="flex space-x-6 mr-24">
                         <span>TEL: +977-9800000000</span>
                         <span>FAX: +41 22 345 6</span>
@@ -58,9 +58,9 @@ const Navigation = () => {
                         {/* Desktop Nav */}
                         <div className="hidden lg:flex items-center space-x-3 ml-17 mt-4">
                             {navItems.map((item) => (
-                                <div id='nav' key={item.label} className="relative z-50 group">
+                                <div  key={item.label} className="relative z-50 group" style={{ fontWeight: 500 }}>
                                     <a
-                                        href={item.link} // <-- fixed
+                                        href={item.link} 
                                         className="flex items-center text-white px-3 py-2 text-sm font-medium relative transition-colors cursor-pointer"
                                         onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.label)}
                                     >
@@ -74,10 +74,10 @@ const Navigation = () => {
 
                         {/* Logo */}
                         <div className="absolute left-1/2 transform -translate-x-1/2 text-center z-40 mt-4">
-                            <h1 className="text-xl lg:text-4xl font-extralight text-white tracking-widest">COZYSTAY</h1>
+                            <span className={`text-xl lg:text-4xl  text-white tracking-widest fontWeight: 400`} >COZYSTAY</span>
                             <div className="flex justify-center mt-1 space-x-1">
                                 {[...Array(5)].map((_, index) => (
-                                    <AiFillStar key={index} className="text-[#ba9d75] w-3 h-4" />
+                                    <AiFillStar key={index} className="text-[#ba9d75] w-3 h-4 " />
                                 ))}
                             </div>
                         </div>
@@ -85,7 +85,7 @@ const Navigation = () => {
                         {/* Right-side Desktop Nav */}
                         <div className="hidden lg:flex items-center space-x-4 z-50 mt-4 mr-20">
                             {/* Pages Dropdown */}
-                            <div id='navi' className="relative group">
+                            <div  className="relative group">
                                 <a
 
                                     className="flex items-center text-white px-3 py-2 text-sm font-medium relative cursor-pointer nav"
@@ -120,13 +120,13 @@ const Navigation = () => {
                             </a>
 
                             {/* Reserve Button */}
-                            <a
-                                href="/reservation"
+                            <button
+                                
                                 className="bg-transparent border border-white text-white px-6 py-2 text-sm hover:bg-white hover:text-black transition-all group relative cursor-pointer reserve"
                             >
                                 Reserve Now
                                 <span className="absolute left-0 -bottom-1 bg-white w-0 group-hover:w-full transition-all duration-300"></span>
-                            </a>
+                            </button>
                         </div>
 
                         {/* Mobile Language */}

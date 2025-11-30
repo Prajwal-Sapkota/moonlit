@@ -56,24 +56,24 @@ const Hero = () => {
                 <div className={`text-center transition duration-700 ease-out
                     ${animateText ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
                 >
-                    <h3 className="text-2xl md:text-4xl lg:text-6xl font-light tracking-wide text-white">
+                    <h3 className="text-2xl md:text-4xl lg:text-6xl font-normal tracking-wide text-white py-4">
                         ROOMS & SUITES
                     </h3>
 
-                    <h1 className="text-md md:text-lg lg:text-2xl font-light tracking-wide text-white mt-4">
+                    <span className="text-md md:text-lg lg:text-2xl font-normal tracking-wide text-white mt-4">
                         Warmth. Care. Peace.
-                    </h1>
+                    </span>
                 </div>
             </div>
 
             {/* ✨ BOOKING FORM */}
-            <div className="relative z-30 max-w-6xl mx-auto px-4 pb-12 mb-10 -mt-10">
-                <div id="form"
+            <div className="relative z-30 max-w-6xl mx-auto px-4 -mt-15 py-12">
+                <div 
                     className="grid grid-cols-1 md:grid-cols-5 gap-6 bg-transparent "
                 >
                     {/* Check in */}
                     <div>
-                        <label className="text-white mb-1 block">Check In</label>
+                        <h1 className="text-white mb-1 block font-normal">Check In</h1>
                         <input
                             type="date"
                             value={checkInDate}
@@ -86,7 +86,7 @@ const Hero = () => {
 
                     {/* Check out */}
                     <div>
-                        <label className="text-white mb-1 block">Check Out</label>
+                        <h1 className="text-white mb-1 block font-normal">Check Out</h1>
                         <input
                             type="date"
                             value={checkOutDate}
@@ -99,7 +99,7 @@ const Hero = () => {
 
                     {/* Rooms */}
                     <div>
-                        <label className="text-white mb-1 block">Rooms</label>
+                        <h1 className="text-white mb-1 block font-normal">Rooms</h1>
                         <div className="flex items-center justify-between text-white border border-[#ba9d75] p-2">
                             <button onClick={() => decrement(setRooms, 1)}>-</button>
                             <span>{rooms}</span>
@@ -109,7 +109,7 @@ const Hero = () => {
 
                     {/* Guests Dropdown */}
                     <div className="relative" ref={dropdownRef}>
-                        <label className="text-white mb-1 block">Guests</label>
+                        <h1 className="text-white mb-1 block font-normal">Guests</h1>
                         <button
                             onClick={() => setIsGuestDropdownOpen(!isGuestDropdownOpen)}
                             className="w-full border border-[#ba9d75] text-white p-2 text-left bg-transparent"
@@ -143,8 +143,8 @@ const Hero = () => {
                     {/* Button */}
                     <div>
                         <button
-                            id="check"
-                            className="w-full bg-[#ba9d75] hover:bg-[#a08360] text-white py-3 font-semibold transition cursor-pointer mt-6"
+                            
+                            className="w-full bg-[#ba9d75] hover:bg-[#a08360] text-white py-3 font-normal transition cursor-pointer mt-6"
                         >
                             Check Availability
                         </button>

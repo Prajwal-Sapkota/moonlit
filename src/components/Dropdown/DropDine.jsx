@@ -26,9 +26,9 @@ const DropDine = () => {
                                 <div className="absolute inset-0 bg-black/40 transition-opacity duration-300 group-hover:bg-black/20"></div>
                             </div>
                             
-                            <h4 className="text-white font-semibold text-sm transition-colors text-center ">
+                            <span className="text-white font-semibold text-sm transition-colors text-center ">
                                 {option.title}
-                            </h4>
+                            </span>
                         </div>
                     ))}
                 </div>

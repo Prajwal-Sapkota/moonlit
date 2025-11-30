@@ -60,20 +60,20 @@ export default function Checkout() {
         <section className="w-full flex flex-col items-center text-center">
 
             <div className="max-w-4xl mt-20 mb-20">
-                <h5 className="text-xs sm:text-sm text-[#ba9d75] font-medium uppercase mb-10">
+                <span className="text-xs sm:text-sm text-[#ba9d75] font-medium uppercase">
                     Check out all restaurants and bars
-                </h5>
+                </span>
 
-                <h3 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-black uppercase mb-10">
+                <h3 className="text-2xl sm:text-3xl md:text-5xl font-normal text-black uppercase py-8">
                     Interested in afternoon tea, bar, cigar lounge?
                 </h3>
 
-                <h1 className="text-lg font-medium text-black mb-10">
+                <p className="text-lg font-normal text-black mb-10">
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. <br />
                     Cras dapibus. Vivamus elementum semper nisi.
-                </h1>
+                </p>
 
-                <button id="restaurant" className="bg-[#ba9d75] text-white border border-[#ba9d78] w-64 py-3 font-semibold hover:bg-[#ab916c]">
+                <button className="bg-[#ba9d75] text-white border border-[#ba9d78] w-64 py-3 font-normal hover:bg-[#ab916c]">
                     View All Restaurants
                 </button>
             </div>

@@ -82,22 +82,22 @@ const Testimonial = () => {
                                 </div>
 
                                 {/* Testimonial Text */}
-                                <blockquote id='text' className="text-2xl sm:text-3xl lg:text-4xl font-light text-white leading-relaxed mb-8 px-4">
+                                <h2 className="text-xl sm:text-2xl lg:text-3xl font-normal text-white leading-relaxed py-4 px-4">
                                     "{testimonial.text}"
-                                </blockquote>
+                                </h2>
 
-                                <div id='stars' className="mb-8 flex justify-center">
+                                <div id='stars' className=" flex justify-center">
                                     {renderStars(testimonial.rating)}
                                 </div>
 
                                 {/* Author Info */}
-                                <div className="text-white mt-12">
-                                    <div id='author' className="text-xl font-semibold mb-2">
+                                <div className="text-white py-4 ">
+                                    <h3 className="text-xl font-normal">
                                         {testimonial.author}
-                                    </div>
-                                    <div id='source' className="text-sm text-gray-300 uppercase tracking-widest">
+                                    </h3>
+                                    <span className="text-sm text-gray-300 uppercase tracking-widest font-normal">
                                         {testimonial.source}
-                                    </div>
+                                    </span>
                                 </div>
 
                             </div>

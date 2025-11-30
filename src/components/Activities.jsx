@@ -28,13 +28,13 @@ const Activities = () => {
 
     return (
         <section className="bg-white py-16 px-4">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto ">
                 
-                <div className="text-center mb-16">
-                    <h1 className="text-sm md:text-md font-bold text-[#ba9d75] mb-4 tracking-widest">
+                <div className="text-center py-12">
+                    <span className="text-sm md:text-md font-medium text-[#ba9d75]  tracking-widest">
                         LOCAL ACTIVITIES & EVENTS
-                    </h1>
-                    <h3 className="text-3xl md:text-4xl lg:text-5xl text-[#1b1c1b] max-w-3xl mx-auto leading-snug">
+                    </span>
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl text-[#1b1c1b] max-w-3xl mx-auto leading-snug fony-normal py-4">
                         IMMERSE YOURSELF IN A DIVERSE MOUNTAIN RESORT LIFE
                     </h3>
                 </div>
@@ -62,18 +62,18 @@ const Activities = () => {
                                     <div className="absolute inset-0 border-2 border-[#ba9d75] pointer-events-none opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:inset-3"></div>
                                 </div>
 
-                                <div className="mt-6 text-center px-2 mb-8">
-                                    <h1 className="text-2xl font-bold text-[#1b1c1b] mb-4">
+                                <div className=" text-center px-2 py-6 ">
+                                    <span className="text-4xl font-normal text-[#1b1c1b] py-2">
                                         {activity.title}
-                                    </h1>
+                                    </span>
 
-                                    <h1 className="text-[#1b1c1b] leading-relaxed mb-4">
+                                    <p className="text-[#1b1c1b] leading-relaxed font-normal py-4">
                                         {activity.description}
-                                    </h1>
+                                    </p>
 
-                                    <button id='discover'
+                                    <button 
                                         href={activity.link}
-                                        className="inline-flex items-center gap-2 text-[#1b1c1b] font-semibold hover:text-[#ba9d75] transition-colors duration-300 cursor-pointer"
+                                        className="inline-flex items-center gap-2 text-[#1b1c1b] font-normal hover:text-[#ba9d75] transition-colors duration-300 cursor-pointer"
                                     >
                                         Discover More
                                         <FaArrowRight />

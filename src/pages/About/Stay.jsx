@@ -35,11 +35,11 @@ export default function Stay() {
         >
             <div className="absolute inset-0 bg-black/70"></div>
 
-            <div className="relative z-10 text-center px-4 sm:px-6 md:px-12 w-full max-w-6xl mx-auto mt-0 sm:-mt-12">
-                <h5 className="text-xs sm:text-sm mb-2 sm:mb-4 drop-shadow-md text-[#ba9d75] font-medium">
+            <div className="relative z-10 text-center px-4 sm:px-6 md:px-12 w-full max-w-6xl mx-auto ">
+                <span className="text-xs sm:text-sm mb-2 sm:mb-4 drop-shadow-md text-[#ba9d75] font-medium">
                     ENJOY YOUR STAY AT THE HOTEL
-                </h5>
-                <h3 className="text-2xl sm:text-3xl md:text-5xl font-semibold leading-snug mb-8 sm:mb-10">
+                </span>
+                <h3 className="text-2xl sm:text-3xl md:text-5xl font-normal leading-snug py-8">
                     Spend your comfortable holiday in the heart of the beautiful Swiss Alps
                 </h3>
 
@@ -48,18 +48,18 @@ export default function Stay() {
                         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
                             {statsData.map((stat, index) => (
                                 <div key={index} className="text-center">
-                                    <span id="count1" className="text-5xl md:text-7xl font-light text-white mb-2 drop-shadow-lg">
+                                    <h2  className="text-5xl md:text-7xl font-normal text-white mb-2 drop-shadow-lg">
                                         {counts[index]}
-                                    </span>
-                                    <h5 className="text-sm md:text-sm text-white uppercase drop-shadow-lg">
+                                    </h2>
+                                    <span className="text-sm md:text-sm text-white uppercase drop-shadow-lg font-medium">
                                         {stat.description}
-                                    </h5>
+                                    </span>
                                 </div>
                             ))}
                         </div>
                     </div>
                 </div>
-                <button id="explore" className="bg-transparent text-white border border-[#ba9d75] w-64 font-semibold py-3 px-6  hover:bg-[#ab916c] transition-colors cursor-pointer mt-8 mb-4">
+                <button className="bg-transparent text-white border border-[#ba9d75] w-64 font-normal py-3 px-6  hover:bg-[#ab916c] transition-colors cursor-pointer mt-8 mb-4">
                     Explore Accomodation
                 </button>
             </div>

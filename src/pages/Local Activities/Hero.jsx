@@ -28,12 +28,12 @@ const Hero = () => {
                         animateText ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                     }`}>
                         
-                        <h3 className="text-2xl md:text-3xl lg:text-7xl font-light  tracking-wider mb-6">
+                        <h3 className="text-2xl md:text-3xl lg:text-7xl font-normal  tracking-wider py-4">
                             THE EXPERIENCE
                         </h3>
-                        <h1 className="text-lg md:text-lg lg:text-xl font-light tracking-wide mb-6">
+                        <p className="text-lg md:text-lg lg:text-xl font-normal tracking-wide mb-6">
                             From thrilling to relaxing. For nature, sports and culture lovers.
-                        </h1>
+                        </p>
                     </div>
                 </div>
 
