@@ -33,11 +33,11 @@ const Navigation = () => {
             {/* Top Info Bar */}
             <div className="hidden lg:block bg-transparent border-b border-white/20 py-5 w-full">
                 <div className="flex justify-between text-sm text-white px-8 ml-24" style={{ fontWeight: 500 }}>
-                    <span >CHABAHIL, KATHMANDU, NEPAL</span>
+                    <span >POKHARA, NEPAL</span>
                     <div className="flex space-x-6 mr-24">
                         <span>TEL: +977-9800000000</span>
                         <span>FAX: +41 22 345 6</span>
-                        <span>bookig@cozystay.com</span>
+                        <span>booking@moonlit.com</span>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@ const Navigation = () => {
 
                         {/* Logo */}
                         <div className="absolute left-1/2 transform -translate-x-1/2 text-center z-40 mt-4">
-                            <span className={`text-xl lg:text-4xl  text-white tracking-widest fontWeight: 400`} >COZYSTAY</span>
+                            <span className={`text-xl lg:text-4xl  text-white tracking-widest fontWeight: 400`} >MOONLIT </span>
                             <div className="flex justify-center mt-1 space-x-1">
                                 {[...Array(5)].map((_, index) => (
                                     <AiFillStar key={index} className="text-[#ba9d75] w-3 h-4 " />
@@ -148,7 +148,7 @@ const Navigation = () => {
 
                         <div className="absolute left-0 top-0 h-full w-full bg-[#52614e] shadow-xl overflow-y-auto">
                             <div className="bg-[#52614e] text-white p-6">
-                                <h1 className="text-2xl font-bold">COZYSTAY</h1>
+                                <h1 className="text-2xl font-bold">MOONLIT</h1>
                                 <div className="flex justify-center mt-1 space-x-1">
                                     {[...Array(5)].map((_, index) => (
                                         <AiFillStar key={index} className="text-[#ba9d75] w-3 h-3 mb-8 " />
@@ -206,25 +206,25 @@ const Navigation = () => {
                             {/* Footer */}
                             <div className="p-6 border-t border-white/20">
                                 <div className="mb-6">
-                                    <h3 className="font-semibold text-white mb-3">CozyStay Mountain Hotel</h3>
+                                    <h3 className="font-semibold text-white mb-3">MOONLITE RESORT</h3>
                                     <p className="text-white/80 text-sm mb-4 leading-relaxed">
-                                        Rue de Lausanne 1098,<br />
-                                        1202 Genève,<br />
-                                        Switzerland
+                                        Lakeside,<br />
+                                        Pokahara,<br />
+                                        Nepal
                                     </p>
-                                    <a href="/map" className="flex items-center text-white font-medium text-sm hover:text-white/80 transition-colors cursor-pointer">
+                                    <a href="/map" className="flex items-center justify-center text-white font-medium text-sm hover:text-white/80 transition-colors cursor-pointer">
                                         <FaMapMarkerAlt className="h-4 w-4 mr-2" /> VIEW ON MAP
                                     </a>
                                 </div>
 
                                 <div className="mb-6">
-                                    <p className="text-white/80 text-sm">+41 22 345 67 88</p>
-                                    <p className="text-white/80 text-sm">info@cozyslay.com</p>
+                                    <p className="text-white/80 text-sm">+977-9800000000</p>
+                                    <p className="text-white/80 text-sm">info@moonlit.com</p>
                                 </div>
 
                                 <div className="pt-4 border-t border-white/20">
                                     <p className="text-white/60 text-xs">
-                                        © Copyright CozyStay WordPress Theme for Hotel Booking.
+                                        © 2025 Moonlit Resort . All rights reserved. Crafted by S.A I.T Solution Nepal
                                     </p>
                                 </div>
                             </div>

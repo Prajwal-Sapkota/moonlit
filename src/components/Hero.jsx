@@ -29,10 +29,10 @@ const Hero = () => {
                         animateText ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                     }`}>
                         <span className="text-md md:text-sm lg:text-md font-medium tracking-wide mb-6">
-                            BOUTIQUE RESORT OFFERING TIMELESS EUROPEAN LUXURY
+                            MOONLIT RESORT OFFERING TIMELESS LUXURY
                         </span>
                         <h3 className="text-2xl md:text-3xl lg:text-7xl font-normal  tracking-wider">
-                            BOUTIQUE RESORT IN THE HEART OF SWISS ALPS
+                            MOONLIT RESORT IN THE HEART OF NEPAL
                         </h3>
                     </div>
                 </div>

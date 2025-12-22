@@ -48,11 +48,11 @@ const RoomsSlider = () => {
         <div className="bg-[#f2ece4] py-12 px-4">
             <div className="max-w-7xl mx-auto ">
                 <div className="flex flex-col md:flex-row justify-between items-start py-20">
-                    <div className="mb-4 md:mb-0">
-                        <span className=" text-left text-sm md:text-md font-medium text-[#ba9d75] ">
+                    <div className=" text-left mb-4 md:mb-0">
+                        <span className=" text-sm md:text-md font-medium text-[#ba9d75] ">
                             DISCOVER OUR ACCOMMODATIONS
                         </span>
-                        <h3 className=" text-left text-3xl md:text-4xl lg:text-5xl text-[#1b1c1b] py-6 font-normal">
+                        <h3 className=" text-3xl md:text-4xl lg:text-5xl text-[#1b1c1b] py-6 font-normal">
                             ROOMS. SUITES. VILLAS
                         </h3>
                     </div>

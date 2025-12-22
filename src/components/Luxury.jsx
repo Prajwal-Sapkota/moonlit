@@ -68,10 +68,10 @@ const Luxury = () => {
     <div className="w-full bg-white">
       <div className="py-12 px-4 sm:px-12 text-center">
         <span className="text-sm sm:text-md font-medium tracking-wider text-[#ba9d75] ">
-          SWISS HERITAGE MEETS MODERN LUXURY
+           HERITAGE MEETS MODERN LUXURY
         </span>
         <h3 className="text-2xl sm:text-3xl md:text-4xl font-normal text-[#1b1c1b] mx-auto leading-relaxed py-4 ">
-          CozyStay in the heart of the mountains is an architectural<br />
+          Moonlit in the heart of the mountains is an architectural<br />
           masterpiece offering contemporary accommodations<br />
           with unrivalled ski and hiking trails.
         </h3>

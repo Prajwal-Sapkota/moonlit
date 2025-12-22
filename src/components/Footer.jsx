@@ -21,9 +21,9 @@ const Footer = () => {
 
                     {/* LEFT */}
                     <div className="text-left">
-                        <h3 className="text-3xl font-normal text-white mb-6">COZYSTAY</h3>
+                        <h3 className="text-3xl font-normal text-white mb-6">MOONLIT</h3>
                         <p className="text-gray-300 text-md leading-relaxed font-normal">
-                            Established in 1998, CozyStay Hotel offers contemporary accommodation
+                            Established in 1998, Moonlit Resort offers contemporary accommodation
                             with serene surroundings and stunning Alpine views.
                         </p>
 
@@ -42,10 +42,10 @@ const Footer = () => {
                         </h3>
 
                         <ul  className="text-gray-300 space-y-2 text-md font-normal py-2">
-                            <span className="cursor-pointer">Email: booking@cozystay.com</span>
-                            <span className="cursor-pointer">Tel: +41 22 345 66 77</span>
-                            <span className="cursor-pointer">Fax: +41 22 345 77 89</span>
-                            <span className="cursor-pointer">Address: Rue de Lausanne, 1202 Genève, Switzerland</span>
+                            <span className="cursor-pointer">Email: booking@moonlit.com</span><br/>
+                            <span className="cursor-pointer">Tel: +977-9800000000</span><br/>
+                            <span className="cursor-pointer">Fax: +41 22 345 77 89</span><br/>
+                            <span className="cursor-pointer">Address: Lakeside, Pokhara, Nepal</span>
                         </ul>
 
                         <button
@@ -131,7 +131,7 @@ const Footer = () => {
                     </div>
 
                     <p className="text-gray-400 text-sm text-center">
-                        © CozyStay Hotel — All Rights Reserved.
+                       © 2025 Moonlit Resort . All rights reserved. Crafted by S.A I.T Solution Nepal
                     </p>
                 </div>
 
