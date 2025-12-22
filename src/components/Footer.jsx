@@ -43,7 +43,7 @@ const Footer = () => {
 
                         <ul  className="text-gray-300 space-y-2 text-md font-normal py-2">
                             <span className="cursor-pointer">Email: booking@moonlit.com</span><br/>
-                            <span className="cursor-pointer">Tel: +977-9800000000,</span>
+                            <span className="cursor-pointer">Tel: +977-9800000000, </span>
                             <span className="cursor-pointer">+977-9800000000</span><br/>
                             <span className="cursor-pointer">Address: Lakeside, Pokhara, Nepal</span>
                         </ul>
