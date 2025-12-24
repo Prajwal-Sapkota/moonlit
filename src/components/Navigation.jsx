@@ -24,7 +24,7 @@ const Navigation = () => {
         { label: 'Dine', link: '/restaurant', hasDropdown: true },
         { label: 'Explore', link: '/activities', hasDropdown: true },
         { label: 'Relax', link: '/wellness', hasDropdown: false },
-        { label: 'Pages', hasDropdown: true },
+        { label: 'About', hasDropdown: false },
         { label: 'Our Blog', link: '/blog', hasDropdown: false },
     ];
 
@@ -89,39 +89,29 @@ const Navigation = () => {
                         {/* Right-side Desktop Nav */}
                         <div className="hidden lg:flex items-center space-x-4 z-50 mt-4 mr-20">
                             {/* Pages Dropdown */}
+                            {/* ABOUT */}
                             <div className="relative group">
                                 <a
-
+                                    href="/about"
                                     className="flex items-center text-white px-3 py-2 text-sm font-medium relative cursor-pointer nav"
-                                    onMouseEnter={() => setActiveDropdown('PAGES')}
                                 >
-                                    PAGES
-                                    <FaChevronDown className="ml-1 h-3 w-3" />
-                                    <span className="absolute left-0 -bottom-1 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-300 "></span>
+                                    ABOUT
+                                    <span className="absolute left-0 -bottom-1 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-300"></span>
                                 </a>
-                                {activeDropdown === 'PAGES' && (
-                                    <div
-                                        className="absolute right-0 mt-2 w-40 bg-black text-white py-1 z-50 text-left"
-                                        onMouseEnter={() => setActiveDropdown('PAGES')}
-                                        onMouseLeave={() => setActiveDropdown(null)}
-                                    >
-                                        <a href='/about' className="block px-4 py-2 text-sm hover:text-[#b99d75] cursor-pointer nav1">About</a>
-                                        <a href='/services' className="block px-4 py-2 text-sm hover:text-[#b99d75] cursor-pointer nav1">Services</a>
-                                        <a href='/rooms' className="block px-4 py-2 text-sm hover:text-[#b99d75] cursor-pointer nav1">Rooms & Suites</a>
-                                        <a href='/restaurant' className="block px-4 py-2 text-sm hover:text-[#b99d75] cursor-pointer nav1">Restaurant</a>
-                                        <a href='/activities' className="block px-4 py-2 text-sm hover:text-[#b99d75] cursor-pointer nav1">Local Activities</a>
-                                        <a href='/wellness' className="block px-4 py-2 text-sm hover:text-[#b99d75] cursor-pointer nav1">Wellness</a>
-                                        <a href='/contact' className="block px-4 py-2 text-sm hover:text-[#b99d75] cursor-pointer nav1">Contact</a>
-                                        <a href='/blog' className="block px-4 py-2 text-sm hover:text-[#b99d75] cursor-pointer nav1">Our Blog</a>
-                                    </div>
-                                )}
                             </div>
 
-                            {/* Language Button */}
-                            <a href="/en" className="flex items-center text-white px-3 py-2 text-sm font-medium group relative cursor-pointer nav">
-                                <FaGlobe className="h-4 w-4 mr-1" /> EN
-                                <span className="absolute left-0 -bottom-1 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-300 "></span>
-                            </a>
+                            {/* OUR BLOG */}
+                            <div className="relative group">
+                                <a
+                                    href="/blog"
+                                    className="flex items-center text-white px-3 py-2 text-sm font-medium relative cursor-pointer nav"
+                                >
+                                    OUR BLOG
+                                    <span className="absolute left-0 -bottom-1 h-[2px] bg-white w-0 group-hover:w-full transition-all duration-300"></span>
+                                </a>
+                            </div>
+
+
 
                             {/* Reserve Button */}
                             <button
@@ -133,12 +123,7 @@ const Navigation = () => {
                             </button>
                         </div>
 
-                        {/* Mobile Language */}
-                        <div className="lg:hidden flex items-center space-x-3 z-50">
-                            <a href="/en" className="flex items-center text-white px-2 py-1 text-sm cursor-pointer">
-                                <FaGlobe className="h-4 w-4 mr-1" /> EN/FR
-                            </a>
-                        </div>
+
                     </div>
                 </div>
 

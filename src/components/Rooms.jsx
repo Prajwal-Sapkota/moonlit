@@ -49,7 +49,7 @@ const RoomsSlider = () => {
             <div className="max-w-7xl mx-auto ">
                 <div className="flex flex-col md:flex-row justify-between items-start py-8 md:py-20">
                     <div className="text-left mb-4 md:mb-0">
-                        <span className="text-md md:text-lg font-medium text-[#ba9d75] block mb-2">
+                        <span className="text-md md:text-lg font-medium text-[#51A687] block mb-2">
                             DISCOVER OUR LUXURY ACCOMMODATIONS
                         </span>
                         <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1b1c1b] font-normal">
@@ -57,7 +57,7 @@ const RoomsSlider = () => {
                         </h3>
                     </div>
                     <div className="mt-6 ">
-                        <button className="inline-flex items-center gap-2 hover:text-[#ba9d75] text-[#1b1c1b] font-normal py-2 px-4 md:py-3 md:px-6 transition-colors duration-300 text-base sm:text-lg md:text-xl lg:text-3xl cursor-pointer">
+                        <button className="inline-flex items-center gap-2 hover:text-[#51A687] text-[#1b1c1b] font-normal py-2 px-4 md:py-3 md:px-6 transition-colors duration-300 text-base sm:text-lg md:text-xl lg:text-3xl cursor-pointer">
                             View All 80 Rooms
                             <FaArrowRight size={14} className="md:size-4" />
                         </button>

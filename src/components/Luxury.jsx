@@ -68,7 +68,7 @@ const Luxury = () => {
   return (
     <div className="w-full bg-white">
       <div className="py-12 px-4 sm:px-12 text-center">
-        <span className="text-md sm:text-lg font-medium tracking-wider text-[#ba9d75] uppercase ">
+        <span className="text-md sm:text-lg font-medium tracking-wider text-[#51A687] uppercase ">
           Welcome to Moonlit Resort
         </span>
         <h3 className="text-2xl sm:text-3xl md:text-4xl max-w-6xl font-normal text-[#1b1c1b] mx-auto leading-relaxed py-4 ">
@@ -77,7 +77,7 @@ const Luxury = () => {
       </div>
 
       <div className="relative w-full py-8 overflow-hidden">
-        <div className="max-w-8xl mx-auto px-4">
+        <div className="max-w-8xl mx-auto">
           {/* Carousel */}
           <div className="relative">
             <div

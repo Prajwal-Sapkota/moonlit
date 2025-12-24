@@ -5,9 +5,9 @@ import Holiday from '../components/Holiday';
 import Essentials from '../components/Essentials';
 import Rooms from '../components/Rooms';
 import Booking from '../components/Booking';
-import Activities from '../components/Activities';
 import Stay from '../components/Stay';
 import Footer from '../components/Footer';
+import Events from '../components/Events';
 
 function Home() {
   return (
@@ -19,7 +19,7 @@ function Home() {
         <Essentials/>
         <Rooms/>
         <Booking/>
-        <Activities/>
+        <Events/>
         <Stay/>
         <Footer/>
 
