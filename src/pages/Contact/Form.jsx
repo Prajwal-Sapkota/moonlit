@@ -21,15 +21,15 @@ const Form = () => {
     };
 
     return (
-        <section className="w-full bg-white py-18 px-4 sm:px-6 lg:px-8 mb-4">
+        <section className="w-full bg-white py-8 sm:py-12 md:py-18 px-4 sm:px-6 lg:px-8 mb-4">
             <div className="max-w-7xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
+                <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-stretch">
                     {/* Left Side - Big Image */}
-                    <div className="relative lg:w-[120%] max-w-none">
+                    <div className="relative lg:w-[120%] max-w-none order-2 lg:order-1">
                         <img
                             src="/images/contact.avif"
                             alt="Moonlit Resort Contact"
-                            className="w-full h-[400px] lg:h-[700px] object-cover shadow-lg"
+                            className="w-full h-[300px] sm:h-[350px] md:h-[400px] lg:h-[600px] xl:h-[700px] object-cover shadow-lg"
                         />
 
                         {/* Overlay */}
@@ -38,27 +38,26 @@ const Form = () => {
 
 
                     {/* Right Side - Content and Form */}
-                    <div className="flex flex-col justify-center lg:ml-20">
+                    <div className="flex flex-col justify-center lg:ml-20 order-1 lg:order-2">
                         {/* Header Section */}
-                        <div className="mb-8">
-                            <span className="text-md sm:text-lg text-[#55694f] font-medium uppercase tracking-wider">
+                        <div className="mb-6 sm:mb-8">
+                            <span className="text-sm sm:text-md md:text-lg text-[#55694f] font-medium uppercase tracking-wider">
                                 CONTACT MOONLIT RESORT
                             </span>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-normal text-black uppercase py-6">
+                            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-black uppercase py-4 sm:py-6">
                                 PLAN YOUR JUNGLE RETREAT
                             </h2>
                             <div className="space-y-2">
-                                <p className="text-lg text-gray-600 font-normal">
+                                <p className="text-sm sm:text-base md:text-lg text-gray-600 font-normal leading-relaxed">
                                     Get in touch with our hospitality team to discuss your stay, 
                                     inquire about destination weddings, corporate retreats, 
                                     or wellness packages at our luxury jungle resort.
                                 </p>
-                               
                             </div>
                         </div>
 
                         {/* Contact Form */}
-                        <form  onSubmit={handleSubmit} className="space-y-8">
+                        <form onSubmit={handleSubmit} className="space-y-6 sm:space-y-8">
                             {/* Name Field */}
                             <div>
                                 <input
@@ -67,7 +66,7 @@ const Form = () => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    className="w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#ba9d75] focus:border-[#ba9d75] transition-colors"
+                                    className="w-full px-3 py-2 sm:py-3 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#ba9d75] focus:border-[#ba9d75] transition-colors text-sm sm:text-base"
                                     placeholder="Your Name"
                                     required
                                 />
@@ -81,7 +80,7 @@ const Form = () => {
                                     name="email"
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#ba9d75] focus:border-[#ba9d75] transition-colors"
+                                    className="w-full px-3 py-2 sm:py-3 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#ba9d75] focus:border-[#ba9d75] transition-colors text-sm sm:text-base"
                                     placeholder="Your Email"
                                     required
                                 />
@@ -94,8 +93,8 @@ const Form = () => {
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
-                                    rows={5}
-                                    className="w-full px-3 py-2 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#ba9d75] focus:border-[#ba9d75] transition-colors resize-vertical"
+                                    rows={4}
+                                    className="w-full px-3 py-2 sm:py-3 border border-gray-300 focus:outline-none focus:ring-1 focus:ring-[#ba9d75] focus:border-[#ba9d75] transition-colors resize-vertical text-sm sm:text-base"
                                     placeholder="Tell us about your stay: room preferences, event plans, or wellness interests"
                                     required
                                 />
@@ -105,7 +104,7 @@ const Form = () => {
                             <div>
                                 <button
                                     type="submit"
-                                    className="bg-[#ba9d75] text-white px-12 py-4 font-normal uppercase tracking-wider hover:bg-[#ab916c] transition-colors duration-300 border border-[#ba9d75] w-full sm:w-auto"
+                                    className="bg-[#ba9d75] text-white px-6 sm:px-12 py-3 sm:py-4 font-normal uppercase tracking-wider hover:bg-[#ab916c] transition-colors duration-300 border border-[#ba9d75] w-full text-sm sm:text-base"
                                 >
                                     Send Inquiry
                                 </button>

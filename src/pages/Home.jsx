@@ -20,7 +20,7 @@ function Home() {
         <Rooms/>
         <Booking/>
         <Events/>
-        <Stay/>
+        
         <Footer/>
 
       </div> 

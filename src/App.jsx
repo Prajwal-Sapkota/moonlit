@@ -8,6 +8,7 @@ import Activities from "./pages/Activities";
 import Wellness from "./pages/Wellness";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
+import BackToTop from "./components/BackToTop";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
 
 
       </Routes>
+      <BackToTop/>
     </Router>
   );
 }

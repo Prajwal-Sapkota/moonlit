@@ -61,7 +61,7 @@ export default function Essentials() {
                                 smallImageRef.current.classList.remove('translate-x-[-80px]', 'opacity-0');
                                 smallImageRef.current.classList.add('translate-x-0', 'opacity-100');
                             }
-                        }, 300);
+                        }, 200);
                     }
                 });
             },
@@ -80,15 +80,15 @@ export default function Essentials() {
     }, []);
 
     return (
-        <div className="w-full bg-white py-18 overflow-hidden">
+        <div className="w-full bg-white py-8 sm:py-12 md:py-18 overflow-hidden">
             <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-black">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32 items-center">
 
                     {/* Left Column - Images */}
                     <div ref={imageContainerRef} className="order-2 lg:order-1">
                         {/* Mobile: Simple stacked images */}
-                        <div className="lg:hidden space-y-6">
-                            <div className="w-full h-[250px] sm:h-[300px] overflow-hidden">
+                        <div className="lg:hidden space-y-4 sm:space-y-6">
+                            <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] overflow-hidden ">
                                 <img
                                     src="/images/natureview.avif"
                                     alt="Moonlit Resort Overview"
@@ -96,7 +96,7 @@ export default function Essentials() {
                                 />
                             </div>
 
-                            <div className="w-full h-[250px] sm:h-[300px] overflow-hidden">
+                            <div className="w-full h-[200px] sm:h-[250px] md:h-[300px] overflow-hidden ">
                                 <img
                                     src="/images/hospitality.avif"
                                     alt="Our Hospitality Team"
@@ -110,7 +110,7 @@ export default function Essentials() {
                             {/* Large Background Image */}
                             <div 
                                 ref={largeImageRef}
-                                className="relative w-2/3 h-[450px] overflow-hidden shadow-lg transition-all duration-700 ease-out translate-x-[-100px] opacity-0"
+                                className="relative w-2/3 h-[400px] xl:h-[450px] overflow-hidden shadow-lg transition-all duration-700 ease-out translate-x-[-100px] opacity-0"
                             >
                                 <img
                                     src="/images/natureview.avif"
@@ -124,7 +124,7 @@ export default function Essentials() {
                             {/* Small Overlapping Image */}
                             <div 
                                 ref={smallImageRef}
-                                className="absolute -bottom-12 -right-8 w-2/3 h-[550px] shadow-lg overflow-hidden transition-all duration-700 ease-out translate-x-[-80px] opacity-0"
+                                className="absolute -bottom-12 -right-8 w-2/3 h-[500px] xl:h-[550px] shadow-lg overflow-hidden transition-all duration-700 ease-out translate-x-[-80px] opacity-0"
                             >
                                 <img
                                     src="/images/hospitality.avif"
@@ -138,31 +138,31 @@ export default function Essentials() {
                     </div>
 
                     {/* Right Column - Content */}
-                    <div className="order-1 lg:order-2 ">
-                        <div className="flex flex-col space-y-4 sm:space-y-6">
-                            <span className="text-left text-md md:text-lg font-medium text-[#55694f]">
+                    <div className="order-1 lg:order-2">
+                        <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-6">
+                            <span className="text-left text-sm sm:text-md md:text-lg font-medium text-[#55694f]">
                                 OUR HOSPITALITY PHILOSOPHY
                             </span>
-                            <h3 className="text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal text-[#1b1c1b]">
+                            <h3 className="text-left text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-normal text-[#1b1c1b]">
                                 THE MOONLIT EXPERIENCE
                             </h3>
 
-                            <p className="text-left text-sm sm:text-base lg:text-lg text-[#1b1c1b] font-normal">
+                            <p className="text-left text-xs sm:text-sm md:text-base lg:text-lg text-[#1b1c1b] font-normal leading-relaxed">
                                 Managed by renowned hospitality veterans, Moonlit Resort delivers authentic Nepali warmth
                                 with international service standards for immersive local experiences under the moonlit sky.
                             </p>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12">
                                 {values.map((value) => {
                                     const IconComponent = value.icon;
                                     return (
                                         <div key={value.id} className="flex items-start space-x-3 sm:space-x-4">
-                                            <IconComponent className="text-[#55694f] mt-1" size={44} />
-                                            <div >
-                                                <h3 className="text-left text-base sm:text-lg lg:text-xl font-normal text-[#1b1c1b] mb-1">
+                                            <IconComponent className="text-[#55694f] mt-1 flex-shrink-0" size={32} />
+                                            <div>
+                                                <h3 className="text-left text-sm sm:text-base md:text-lg lg:text-xl font-normal text-[#1b1c1b] mb-1">
                                                     {value.title}
                                                 </h3>
-                                                <p className="text-left text-[#1b1c1b] font-normal text-xs sm:text-sm">
+                                                <p className="text-left text-[#1b1c1b] font-normal text-xs sm:text-sm md:text-sm">
                                                     {value.description}
                                                 </p>
                                             </div>

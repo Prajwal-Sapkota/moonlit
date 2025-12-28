@@ -5,14 +5,16 @@ import DropDine from './Dropdown/DropDine';
 import DropStay from './Dropdown/DropStay';
 import DropPlay from './Dropdown/DropPlay';
 import DropHome from './Dropdown/DropHome';
+import { useNavigate } from 'react-router-dom';
 
 const Navigation = () => {
     const [activeDropdown, setActiveDropdown] = useState(null);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const navigate = useNavigate();
 
     const navItems = [
         { label: 'HOME', link: '/', hasDropdown: true },
-        { label: 'STAY', link: '/rooms', hasDropdown: true },
+        { label: 'ROOMS', link: '/rooms', hasDropdown: true },
         { label: 'DINE', link: '/restaurant', hasDropdown: true },
         { label: 'EXPLORE', link: '/activities', hasDropdown: true },
         { label: 'RELAX', link: '/wellness', hasDropdown: false },
@@ -20,11 +22,11 @@ const Navigation = () => {
 
     const mobileNavItems = [
         { label: 'Home', link: '/', hasDropdown: false },
-        { label: 'Stay', link: '/rooms', hasDropdown: false },
+        { label: 'Rooms', link: '/rooms', hasDropdown: false },
         { label: 'Dine', link: '/restaurant', hasDropdown: true },
         { label: 'Explore', link: '/activities', hasDropdown: true },
         { label: 'Relax', link: '/wellness', hasDropdown: false },
-        { label: 'About', hasDropdown: false },
+        { label: 'About', link: '/about', hasDropdown: false },
         { label: 'Contact', link: '/contact', hasDropdown: false },
     ];
 
@@ -77,18 +79,27 @@ const Navigation = () => {
                         </div>
 
                         {/* Logo */}
-                        <div className="absolute left-1/2 transform -translate-x-1/2 text-center z-40 mt-4">
-                            <span className={`text-xl lg:text-4xl  text-white tracking-widest fontWeight: 400`} >MOONLIT </span>
+                        <div
+                            onClick={() => navigate("/")}
+                            className="absolute left-1/2 transform -translate-x-1/2 text-center z-40 mt-4 cursor-pointer"
+                        >
+                            <span className="text-xl lg:text-4xl text-white tracking-widest font-normal">
+                                MOONLIT
+                            </span>
+
                             <div className="flex justify-center mt-1 space-x-1">
                                 {[...Array(5)].map((_, index) => (
-                                    <AiFillStar key={index} className="text-[#ba9d75] w-3 h-4 " />
+                                    <AiFillStar
+                                        key={index}
+                                        className="text-[#ba9d75] w-3 h-4"
+                                    />
                                 ))}
                             </div>
                         </div>
 
                         {/* Right-side Desktop Nav */}
                         <div className="hidden lg:flex items-center space-x-4 z-50 mt-4 mr-20">
-                          
+
                             <div className="relative group">
                                 <a
                                     href="/about"
@@ -148,41 +159,84 @@ const Navigation = () => {
                             <div className="p-4 space-y-1">
                                 {mobileNavItems.map((item) => (
                                     <div key={item.label} className="border-white/20 last:border-b-0">
-                                        <button
-                                            className="flex items-center justify-between w-full text-white py-4 px-2 text-left hover:bg-white/10 rounded-lg transition-colors cursor-pointer"
-                                            onClick={() => item.hasDropdown && setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                                        >
-                                            <span className="font-medium">{item.label}</span>
+                                        <div className="flex items-center justify-between w-full">
+                                            {/* Main navigation link */}
+                                            <a
+                                                href={item.link}
+                                                className="flex-1 text-white py-4 px-2 text-left hover:bg-white/10 rounded-lg transition-colors cursor-pointer font-medium"
+                                                onClick={() => setMobileMenuOpen(false)}
+                                            >
+                                                {item.label}
+                                            </a>
+
+                                            {/* Chevron for dropdown toggle */}
                                             {item.hasDropdown && (
-                                                <FaChevronDown className={`h-3 w-3 transition-transform ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
+                                                <button
+                                                    onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
+                                                    className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors cursor-pointer"
+                                                >
+                                                    <FaChevronDown className={`h-3 w-3 transition-transform ${activeDropdown === item.label ? 'rotate-180' : ''}`} />
+                                                </button>
                                             )}
-                                        </button>
+                                        </div>
 
                                         {item.hasDropdown && activeDropdown === item.label && (
                                             <div className="ml-4 space-y-2 pb-3 mobile-nav-items">
                                                 {item.label === 'Dine' && (
                                                     <>
-                                                        <a href="/dine/fine-dining" className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">Fine Dining Restaurant</a>
-                                                        <a href="/dine/bar-lounge" className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">Bar & Lounge</a>
-                                                        <a href="/dine/room-service" className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">Room Service</a>
-                                                        <a href="/dine/coffee-shop" className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">Coffee Shop</a>
+                                                        <a
+                                                            href="#"
+                                                            className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer"
+                                                            onClick={() => setMobileMenuOpen(false)}
+                                                        >
+                                                            All-Day Dining Restaurant
+                                                        </a>
+                                                        <a
+                                                            href="#"
+                                                            className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer"
+                                                            onClick={() => setMobileMenuOpen(false)}
+                                                        >
+                                                            Pool Bar
+                                                        </a>
+                                                        <a
+                                                            href="#"
+                                                            className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer"
+                                                            onClick={() => setMobileMenuOpen(false)}
+                                                        >
+                                                            Menu & Beverages
+                                                        </a>
                                                     </>
                                                 )}
-                                                {item.label === 'Play' && (
+                                                {item.label === 'Explore' && (
                                                     <>
-                                                        <a href="/play/swimming" className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">Swimming Pool</a>
-                                                        <a href="/play/tennis" className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">Tennis Court</a>
-                                                        <a href="/play/fitness" className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">Fitness Center</a>
-                                                        <a href="/play/entertainment" className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">Entertainment</a>
-                                                    </>
-                                                )}
-
-                                                {item.label === 'Pages' && (
-                                                    <>
-                                                        <a href='/about' className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">About Us</a>
-                                                        <a href='/gallery' className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">Gallery</a>
-                                                        <a href='/contact' className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">Contact</a>
-                                                        <a href='/faq' className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer">FAQ</a>
+                                                        <a
+                                                            href="#"
+                                                            className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer"
+                                                            onClick={() => setMobileMenuOpen(false)}
+                                                        >
+                                                            Jungle Adventures
+                                                        </a>
+                                                        <a
+                                                            href="#"
+                                                            className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer"
+                                                            onClick={() => setMobileMenuOpen(false)}
+                                                        >
+                                                            Cultural Experiences
+                                                        </a>
+                                                        <a
+                                                            href="#"
+                                                            className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer"
+                                                            onClick={() => setMobileMenuOpen(false)}
+                                                        >
+                                                            Chitwan National Park
+                                                        </a>
+                                                        <a
+                                                            href="#"
+                                                            className="block py-2 text-white/80 text-sm hover:text-white cursor-pointer"
+                                                            onClick={() => setMobileMenuOpen(false)}
+                                                        >
+                                                            Wellness Sanctuary
+                                                        </a>
                                                     </>
                                                 )}
                                             </div>
@@ -190,7 +244,6 @@ const Navigation = () => {
                                     </div>
                                 ))}
                             </div>
-
                             {/* Footer */}
                             <div className="p-4 border-t border-white/20">
                                 <div className="py-6">
@@ -233,14 +286,14 @@ const Navigation = () => {
                 )}
 
                 {/* Dropdowns for desktop */}
-                {activeDropdown && ['HOME', 'STAY', 'DINE', 'EXPLORE'].includes(activeDropdown) && (
+                {activeDropdown && ['HOME', 'ROOMS', 'DINE', 'EXPLORE'].includes(activeDropdown) && (
                     <div className="absolute top-full left-0 w-full hidden lg:block" style={{ pointerEvents: 'none' }}>
                         <div style={{ pointerEvents: 'auto' }}
                             onMouseEnter={() => setActiveDropdown(activeDropdown)}
                             onMouseLeave={() => setActiveDropdown(null)}
                         >
                             {activeDropdown === 'HOME' && <DropHome />}
-                            {activeDropdown === 'STAY' && <DropStay />}
+                            {activeDropdown === 'ROOMS' && <DropStay />}
                             {activeDropdown === 'DINE' && <DropDine />}
                             {activeDropdown === 'EXPLORE' && <DropPlay />}
                         </div>

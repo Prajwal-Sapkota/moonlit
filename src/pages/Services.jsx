@@ -3,7 +3,7 @@ import Amenities from "./Services/Amenities";
 import Discover from "./Services/Discover";
 import Hero from "./Services/Hero";
 import Stays from "./Services/Stays";
-import Testimonial from "./Services/Testimonial";
+// import Testimonial from "./Services/Testimonial";
 
 
 
@@ -15,7 +15,7 @@ function Services() {
         <Amenities/>
         <Stays/>
         <Discover/>
-        <Testimonial/>
+        {/* <Testimonial/> */}
        
         <Footer/>
 

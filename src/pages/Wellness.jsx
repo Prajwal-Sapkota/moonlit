@@ -14,7 +14,7 @@ function Wellness() {
         <Hero/>
         <Reservation/>
         <Journey/>
-       <Information/>
+       {/* <Information/> */}
        <Pool/>
         
         

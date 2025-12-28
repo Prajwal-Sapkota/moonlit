@@ -30,74 +30,104 @@ export default function Booking() {
   const decrement = (setter, min) => setter((prev) => Math.max(min, prev - 1));
 
   return (
-    <section className="relative -mt-10">
-      <div className="max-w-6xl bg-[#55694f] mx-auto px-4 z-20 py-8">
-        <div id="form" className="grid grid-cols-1 md:grid-cols-5 gap-4 items-end">
+    <section className="relative py-6 sm:py-8 md:py-12 px-4 sm:px-6">
+      <div className="max-w-6xl bg-[#55694f] mx-auto px-3 sm:px-4 md:px-6 py-6 sm:py-8 z-20">
+        <div id="form" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4 items-end">
 
           <div className="flex flex-col">
-            <span className="text-white font-medium mb-2">Check In</span>
+            <span className="text-white font-medium mb-1 sm:mb-2 text-sm sm:text-base">Check In</span>
             <input
               type="date"
               value={checkInDate}
               onChange={(e) => setCheckInDate(e.target.value)}
-              className="border border-[#ba9d75] p-2 bg-[#55694f] text-white focus:outline-none [color-scheme:dark]"
+              className="border border-[#ba9d75] p-2 sm:p-3 bg-[#55694f] text-white focus:outline-none [color-scheme:dark] text-sm sm:text-base"
               min={new Date().toISOString().split("T")[0]}
             />
           </div>
 
           <div className="flex flex-col">
-            <span className="text-white font-normal mb-2">Check Out</span>
+            <span className="text-white font-normal mb-1 sm:mb-2 text-sm sm:text-base">Check Out</span>
             <input
               type="date"
               value={checkOutDate}
               onChange={(e) => setCheckOutDate(e.target.value)}
-              className="border border-[#ba9d75] p-2 bg-[#55694f] text-white focus:outline-none [color-scheme:dark]"
+              className="border border-[#ba9d75] p-2 sm:p-3 bg-[#55694f] text-white focus:outline-none [color-scheme:dark] text-sm sm:text-base"
               min={checkInDate}
             />
           </div>
 
           <div className="flex flex-col">
-            <span className="text-white font-normal mb-2">Rooms</span>
-            <div className="border border-[#ba9d75] p-2 flex justify-between items-center text-white">
-              <button onClick={() => decrement(setRooms, 1)}>-</button>
-              <span>{rooms}</span>
-              <button onClick={() => increment(setRooms)}>+</button>
+            <span className="text-white font-normal mb-1 sm:mb-2 text-sm sm:text-base">Rooms</span>
+            <div className="border border-[#ba9d75] p-2 sm:p-3 flex justify-between items-center text-white">
+              <button 
+                onClick={() => decrement(setRooms, 1)} 
+                className="w-6 h-6 flex items-center justify-center hover:bg-[#ba9d75]/20 rounded"
+              >
+                -
+              </button>
+              <span className="text-sm sm:text-base">{rooms}</span>
+              <button 
+                onClick={() => increment(setRooms)} 
+                className="w-6 h-6 flex items-center justify-center hover:bg-[#ba9d75]/20 rounded"
+              >
+                +
+              </button>
             </div>
           </div>
 
           <div className="flex flex-col relative" ref={dropdownRef}>
-            <span className="text-white font-normal mb-2">Guests</span>
+            <span className="text-white font-normal mb-1 sm:mb-2 text-sm sm:text-base">Guests</span>
             <button
               onClick={() => setIsGuestDropdownOpen(!isGuestDropdownOpen)}
-              className="border border-[#ba9d75] p-2 text-left text-white bg-[#55694f] focus:outline-none"
+              className="border border-[#ba9d75] p-2 sm:p-3 text-left text-white bg-[#55694f] focus:outline-none text-sm sm:text-base"
             >
               {adults} Adult{adults !== 1 ? "s" : ""}{children > 0 ? `, ${children} Child${children !== 1 ? "ren" : ""}` : ""}
             </button>
 
             {isGuestDropdownOpen && (
-              <div className="absolute top-full left-0 right-0 mt-1 bg-[#55694f] border border-[#ba9d75] rounded-lg p-4 text-white z-10">
-                <div className="flex justify-between items-center mb-2">
-                  <div>Adults</div>
-                  <div className="flex items-center gap-2">
-                    <button onClick={() => decrement(setAdults, 1)}>-</button>
-                    <span>{adults}</span>
-                    <button onClick={() => increment(setAdults)}>+</button>
+              <div className="absolute top-full left-0 right-0 mt-1 bg-[#55694f] border border-[#ba9d75] rounded-lg p-4 text-white z-10 w-full">
+                <div className="flex justify-between items-center mb-3">
+                  <div className="text-sm sm:text-base">Adults</div>
+                  <div className="flex items-center gap-3">
+                    <button 
+                      onClick={() => decrement(setAdults, 1)}
+                      className="w-6 h-6 flex items-center justify-center hover:bg-[#ba9d75]/20 rounded text-sm sm:text-base"
+                    >
+                      -
+                    </button>
+                    <span className="text-sm sm:text-base min-w-[20px] text-center">{adults}</span>
+                    <button 
+                      onClick={() => increment(setAdults)}
+                      className="w-6 h-6 flex items-center justify-center hover:bg-[#ba9d75]/20 rounded text-sm sm:text-base"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span>Children</span>
-                  <div className="flex items-center gap-2">
-                    <button onClick={() => decrement(setChildren, 0)}>-</button>
-                    <span>{children}</span>
-                    <button onClick={() => increment(setChildren)}>+</button>
+                  <span className="text-sm sm:text-base">Children</span>
+                  <div className="flex items-center gap-3">
+                    <button 
+                      onClick={() => decrement(setChildren, 0)}
+                      className="w-6 h-6 flex items-center justify-center hover:bg-[#ba9d75]/20 rounded text-sm sm:text-base"
+                    >
+                      -
+                    </button>
+                    <span className="text-sm sm:text-base min-w-[20px] text-center">{children}</span>
+                    <button 
+                      onClick={() => increment(setChildren)}
+                      className="w-6 h-6 flex items-center justify-center hover:bg-[#ba9d75]/20 rounded text-sm sm:text-base"
+                    >
+                      +
+                    </button>
                   </div>
                 </div>
               </div>
             )}
           </div>
 
-          <div>
-            <button className="w-full bg-[#ba9d75] text-white font-normal py-3 px-6 hover:bg-[#ab916c] transition-colors cursor-pointer">
+          <div className="sm:col-span-2 md:col-span-1">
+            <button className="w-full bg-[#ba9d75] text-white font-normal py-3 px-4 sm:px-6 hover:bg-[#ab916c] transition-colors cursor-pointer text-sm sm:text-base">
               Check Availability
             </button>
           </div>

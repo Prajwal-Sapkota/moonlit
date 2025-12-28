@@ -6,7 +6,6 @@ const RoomsSlider = () => {
         {
             id: 1,
             name: "Deluxe Room with Garden View",
-            price: "$299",
             size: "45 m²",
             guests: "2 Guests",
             beds: "1 King Bed",
@@ -17,7 +16,6 @@ const RoomsSlider = () => {
         {
             id: 2,
             name: "River View Suite",
-            price: "$399",
             size: "60 m²",
             guests: "4 Guests",
             beds: "2 Double Beds",
@@ -28,7 +26,6 @@ const RoomsSlider = () => {
         {
             id: 3,
             name: "Kerung Stream Villa",
-            price: "$599",
             size: "85 m²",
             guests: "6 Guests",
             beds: "3 Beds",
@@ -45,24 +42,25 @@ const RoomsSlider = () => {
     const prevSlide = () => setCurrent((prev) => (prev - 1 + length) % length);
 
     return (
-        <div className="bg-[#f2ece4] py-18 px-4">
-            <div className="max-w-7xl mx-auto ">
-                <div className="flex flex-col md:flex-row justify-between items-start ">
-                    <div className="text-left ">
-                        <span className="text-md md:text-lg font-medium text-[#55694f] block ">
+        <div className="bg-[#f2ece4] py-8 sm:py-12 md:py-18 px-4 sm:px-6">
+            <div className="max-w-7xl mx-auto">
+                <div className="flex flex-col md:flex-row justify-between items-start mb-4 sm:mb-6 md:mb-8">
+                    <div className="text-left">
+                        <span className="text-sm sm:text-md md:text-lg font-medium text-[#55694f] block">
                             DISCOVER OUR LUXURY ACCOMMODATIONS
                         </span>
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[#1b1c1b] font-normal leading-tight py-6">
+                        <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-[#1b1c1b] font-normal leading-tight py-3 sm:py-4 md:py-6">
                             80 ELEGANT ROOMS & SUITES
                         </h3>
                     </div>
-                    <div className="mt-12 ">
-                        <button className="inline-flex items-center gap-2 hover:text-[#55694f] text-[#1b1c1b] font-normal py-2 px-4 md:py-3 md:px-6 transition-colors duration-300 text-base sm:text-lg md:text-xl lg:text-3xl cursor-pointer">
+                    <div className="mt-4 sm:mt-6 md:mt-0">
+                        <button className="inline-flex items-center gap-1 sm:gap-2 hover:text-[#55694f] text-[#1b1c1b] font-normal py-1 sm:py-2 md:py-3 px-3 sm:px-4 md:px-6 transition-colors duration-300 text-sm sm:text-base md:text-lg lg:text-xl cursor-pointer">
                             View All 80 Rooms
-                            <FaArrowRight size={14} className="md:size-4" />
+                            <FaArrowRight className="text-xs sm:text-sm md:text-base" />
                         </button>
                     </div>
                 </div>
+                
                 <div className="relative overflow-hidden py-6 ">
                     <button
                         onClick={prevSlide}
@@ -90,9 +88,7 @@ const RoomsSlider = () => {
                                     className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 bg-black/40"></div>
-                                <span className="absolute top-2 left-2 md:top-4 md:left-4 bg-[#67593f] text-white font-normal py-1 px-3 md:py-2 md:px-4 border border-[#ba9d75] text-sm md:text-base">
-                                    FROM {room.price}/NIGHT
-                                </span>
+                                
 
                                 <div className="absolute inset-0 flex flex-col justify-center items-center p-4 md:p-10 text-white text-center space-y-2 md:space-y-4 font-normal">
                                     <h3 className="text-2xl sm:text-3xl md:text-5xl font-normal">{room.name}</h3>

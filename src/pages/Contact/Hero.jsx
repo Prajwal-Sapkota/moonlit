@@ -28,10 +28,10 @@ const Hero = () => {
                         animateText ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                     }`}>
                         
-                        <h3 className="text-2xl md:text-3xl lg:text-7xl font-normal  tracking-wider py-4">
+                        <h3 className="text-5xl md:text-6xl lg:text-7xl font-normal  tracking-wider py-4">
                             CONTACT US
                         </h3>
-                        <p className="text-lg md:text-lg lg:text-xl font-normal tracking-wide ">
+                        <p className="text-xl md:text-2xl lg:text-3xl  text-emerald-50 font-light">
                             For bookings and enquiries, please call us or write to us.
                         </p>
                     </div>

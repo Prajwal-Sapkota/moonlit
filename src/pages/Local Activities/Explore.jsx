@@ -23,12 +23,11 @@ const Explore = () => {
   }, []);
 
   const slideInLeft = (visible) =>
-    visible ? "translate-x-0 opacity-100" : "-translate-x-20 opacity-0";
+    visible ? "translate-x-0 opacity-100" : "-translate-x-10 md:-translate-x-20 opacity-0";
   const slideInRight = (visible) =>
-    visible ? "translate-x-0 opacity-100" : "translate-x-20 opacity-0";
+    visible ? "translate-x-0 opacity-100" : "translate-x-10 md:translate-x-20 opacity-0";
 
   const sections = [
-    
     {
       title: "Jeep Safari Adventure",
       subtitle: "CHITWAN EXPLORATION",
@@ -104,12 +103,12 @@ const Explore = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-18">
-      <div className="max-w-4xl mx-auto text-center">
-        <span className="text-md sm:text-lg text-[#55694f] font-medium uppercase mb-4 drop-shadow-md">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 md:py-18">
+      <div className="max-w-4xl mx-auto text-center px-4">
+        <span className="text-sm sm:text-md md:text-lg text-[#55694f] font-medium uppercase mb-4 drop-shadow-md">
           Moonlit Resort Experiences
         </span>
-        <h3 className="text-2xl sm:text-3xl md:text-3xl font-normal text-black leading-snug py-4">
+        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal text-black leading-snug py-4">
           Located close to Chitwan National Park, guests can enjoy unforgettable adventures and cultural experiences in a peaceful natural setting.
         </h3>
       </div>
@@ -118,7 +117,7 @@ const Explore = () => {
         <section
           key={idx}
           ref={sectionRefs[idx]}
-          className="relative w-full min-h-[96vh] flex flex-col items-center justify-center py-12"
+          className="relative w-full min-h-[50vh] md:min-h-[70vh] lg:min-h-[96vh] flex flex-col items-center justify-center py-8 md:py-12"
         >
           <div
             className={`relative w-full flex flex-col lg:flex-row items-center ${
@@ -127,7 +126,7 @@ const Explore = () => {
           >
             {/* Image */}
             <div
-              className={`w-full lg:w-2/3 transition-all duration-1000 ease-out ${
+              className={`w-full lg:w-2/3 transition-all duration-700 md:duration-1000 ease-out ${
                 section.reverse
                   ? slideInLeft(isVisible[idx])
                   : slideInRight(isVisible[idx])
@@ -136,40 +135,40 @@ const Explore = () => {
               <img
                 src={section.image}
                 alt={section.title}
-                className="w-full h-[500px] lg:h-[700px] object-cover shadow-2xl"
+                className="w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] object-cover shadow-lg md:shadow-2xl"
               />
             </div>
 
             {/* Content */}
             <div
-              className={`bg-[#55694f] py-18 px-3 space-y-2 transition-all duration-1000 ease-out w-full lg:w-1/2 lg:absolute lg:top-1/2 lg:-translate-y-1/2 ${
+              className={`bg-[#55694f] py-8 md:py-12 lg:py-18 px-4 md:px-6 lg:px-8 space-y-2 transition-all duration-700 md:duration-1000 ease-out w-full lg:w-1/2 lg:absolute lg:top-1/2 lg:-translate-y-1/2 ${
                 section.reverse ? "lg:left-0" : "lg:right-0"
-              } z-10 shadow-2xl ${
+              } z-10 shadow-lg md:shadow-2xl ${
                 section.reverse
                   ? slideInRight(isVisible[idx])
                   : slideInLeft(isVisible[idx])
-              }`}
+              } mt-6 md:mt-0`}
             >
-              <span className="text-sm text-[#ba9d75] uppercase tracking-wide font-medium">
+              <span className="text-xs sm:text-sm md:text-sm text-[#ba9d75] uppercase tracking-wide font-medium">
                 {section.subtitle}
               </span>
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-normal text-white uppercase py-8">
+              <h3 className="text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl font-normal text-white uppercase py-4 md:py-6 lg:py-8">
                 {section.title}
               </h3>
-              <p className="text-white leading-relaxed text-lg font-normal mb-8">
+              <p className="text-white leading-relaxed text-sm sm:text-base md:text-lg font-normal mb-6 md:mb-8">
                 {section.text}
               </p>
-              <button className="bg-transparent text-white px-8 py-3 font-normal hover:bg-[#ba9d78] transition-colors duration-300 uppercase tracking-wide border border-[#ba9d75]">
+              <button className="bg-transparent text-white px-6 md:px-8 py-2 md:py-3 font-normal hover:bg-[#ba9d78] transition-colors duration-300 uppercase tracking-wide border border-[#ba9d75] text-sm md:text-base">
                 Book Experience
               </button>
 
-              <div className="grid grid-cols-3 gap-4 text-white py-6">
+              <div className="grid grid-cols-3 gap-2 md:gap-4 text-white py-4 md:py-6">
                 {section.stats.map((stat, idx2) => (
-                  <div key={idx2} className="text-center p-3">
-                    <h3 className="text-2xl md:text-3xl font-semibold">
+                  <div key={idx2} className="text-center p-2 md:p-3">
+                    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold">
                       {stat.value}
                     </h3>
-                    <span className="text-xs md:text-sm font-medium text-[#ba9d75] uppercase tracking-wide">
+                    <span className="text-xs font-medium text-[#ba9d75] uppercase tracking-wide">
                       {stat.label}
                     </span>
                   </div>

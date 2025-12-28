@@ -20,6 +20,7 @@ const Welcome = () => {
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) setSlidesToShow(1);
+      else if (window.innerWidth < 768) setSlidesToShow(2);
       else if (window.innerWidth < 1024) setSlidesToShow(2);
       else setSlidesToShow(3);
     };
@@ -64,12 +65,12 @@ const Welcome = () => {
   return (
     <div className="w-full bg-white">
       {/* Text Section */}
-      <div className="py-16 px-4 sm:px-12 text-center">
-        <span className="text-md sm:text-lg font-medium tracking-wider text-[#55694f] uppercase">
+      <div className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-12 text-center">
+        <span className="text-sm sm:text-md md:text-lg font-medium tracking-wider text-[#55694f] uppercase">
           Welcome to Moonlit Resort
         </span>
 
-        <h3 className="text-2xl sm:text-3xl md:text-4xl max-w-6xl font-normal text-[#1b1c1b] mx-auto leading-relaxed pt-4">
+        <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl max-w-6xl font-normal text-[#1b1c1b] mx-auto leading-relaxed pt-3 sm:pt-4">
           Moonlit Resort is a refined luxury retreat designed for leisure travelers, destination weddings, wellness seekers, and premium events. Surrounded by lush greenery, with the Rapti River nearby and the tranquil Kerung Stream adjacent.
         </h3>
       </div>

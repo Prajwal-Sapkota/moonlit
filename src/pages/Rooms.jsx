@@ -5,7 +5,7 @@ import Comfortable from "./Rooms/Comfortable";
 
 import Hero from "./Rooms/Hero";
 import RoomsList from "./Rooms/RoomsList";
-import Testimonial from "./Services/Testimonial";
+import Testimonial from "./Rooms/Testimonial";
 
 
 function Rooms() {
